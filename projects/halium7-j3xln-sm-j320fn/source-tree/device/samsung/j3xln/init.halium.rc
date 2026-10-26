@@ -1,0 +1,100 @@
+# init.halium.rc - Halium 7.1 init for SM-J320FN
+# Samsung Galaxy J3 2016 (SM-J320FN)
+
+on early-init
+    # Set up cgroups
+    mkdir /sys/fs/cgroup
+    mount tmpfs cgroup /sys/fs/cgroup mode=0750,uid=0,gid=1000
+    mkdir /sys/fs/cgroup/memory 0750 root root
+    mount cgroup memory /sys/fs/cgroup/memory -o memory
+    mkdir /sys/fs/cgroup/freezer 0750 root root
+    mount cgroup freezer /sys/fs/cgroup/freezer -o freezer
+    mkdir /sys/fs/cgroup/devices 0750 root root
+    mount cgroup devices /sys/fs/cgroup/devices -o devices
+    mkdir /sys/fs/cgroup/blkio 0750 root root
+    mount cgroup blkio /sys/fs/cgroup/blkio -o blkio
+
+on init
+    # Kernel parameters
+    write /proc/sys/kernel/random/entropy_avail 1024
+
+    # Set up mapping for devices
+    symlink /dev/block/platform/sdio_emmc/by-name/SYSTEM /dev/block/system
+    symlink /dev/block/platform/sdio_emmc/by-name/userdata /dev/block/userdata
+    symlink /dev/block/platform/sdio_emmc/by-name/CACHE /dev/block/cache
+    symlink /dev/block/platform/sdio_emmc/by-name/KERNEL /dev/block/boot
+
+    # Create necessary directories
+    mkdir /data/local 0771 root shell
+    mkdir /data/local/tmp 1777 root shell
+    mkdir /data/ubuntu 0755 root root
+    mkdir /data/halium 0755 root root
+    mkdir /data/media 0770 media media
+    mkdir /data/app 0771 root root
+
+    # USB configuration
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 04e8
+    write /sys/class/android_usb/android0/idProduct 6860
+    write /sys/class/android_usb/android0/functions mtp,adb
+    write /sys/class/android_usb/android0/enable 1
+
+    # Set SELinux to permissive for initial testing
+    write /sys/fs/selinux/enforce 0
+
+on boot
+    # Enable USB debugging
+    setprop sys.usb.config mtp,adb
+    setprop sys.usb.configfs 1
+
+    # Start ADB
+    start adbd
+
+    # Enable SSH daemon
+    service sshd /system/bin/sshd -D
+        disabled
+        oneshot
+        seclabel u:r:shell:s0
+
+    # Enable debug shell
+    service shell /system/bin/sh
+        disabled
+        seclabel u:r:shell:s0
+
+on property:sys.boot_completed=1
+    # Start SSH after boot
+    start sshd
+    # Enable USB network
+    setprop sys.usb.config rndis,adb
+    setprop sys.usb.configfs 1
+
+on property:sys.usb.ffs.ready=1
+    # Enable ADB
+    setprop sys.usb.config adb
+    setprop sys.usb.configfs 1
+
+# USB functions
+on property:sys.usb.config=mtp
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions mtp
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=adb
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions adb
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=mtp,adb
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions mtp,adb
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=rndis
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions rndis
+    write /sys/class/android_usb/android0/enable 1
+
+on property:sys.usb.config=rndis,adb
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/functions rndis,adb
+    write /sys/class/android_usb/android0/enable 1

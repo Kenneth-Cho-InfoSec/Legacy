@@ -1,0 +1,31 @@
+# Private firmware and captured traffic
+/firmware-dumps/private-not-for-redistribution/**
+!/firmware-dumps/private-not-for-redistribution/.gitkeep
+*.bin
+*.fw
+*.ota
+*.ufw
+*.snoop
+*.pcap
+*.pcapng
+*.btsnoop
+*.log
+
+# Generated analysis output
+/analysis/**/extracted/
+/analysis/**/_*/
+*.ghidra
+*.rep
+*.lock
+
+# Hardware originals can be large/private; publish curated copies deliberately.
+/hardware/photos/originals/
+
+# Python and editor noise
+__pycache__/
+.venv/
+.mypy_cache/
+.pytest_cache/
+.vscode/
+.idea/
+

@@ -1,0 +1,21 @@
+[package]
+name = "radiant-engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+arc-swap.workspace = true
+radiant-domain = { path = "../radiant-domain" }
+radiant-graph = { path = "../radiant-graph" }
+radiant-media = { path = "../radiant-media" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

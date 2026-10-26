@@ -1,0 +1,8 @@
+i18n = import('i18n')
+gnome = import('gnome')
+gnome.compile_schemas(depend_files: files('io.github.GnomeUpright.gschema.xml'))
+desktop = i18n.merge_file(input: 'io.github.GnomeUpright.desktop.in', output: 'io.github.GnomeUpright.desktop', type: 'desktop', po_dir: '../po', install: true, install_dir: join_paths(get_option('datadir'), 'applications'))
+metainfo = i18n.merge_file(input: 'io.github.GnomeUpright.metainfo.xml.in', output: 'io.github.GnomeUpright.metainfo.xml', po_dir: '../po', install: true, install_dir: join_paths(get_option('datadir'), 'metainfo'))
+install_data('io.github.GnomeUpright.gschema.xml', install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas'))
+install_data('icons/hicolor/scalable/apps/io.github.GnomeUpright.svg', install_dir: join_paths(get_option('datadir'), 'icons/hicolor/scalable/apps'))
+install_data('icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg', install_dir: join_paths(get_option('datadir'), 'icons/hicolor/symbolic/apps'))

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hziminfo xmlns:hzim="http://hzim.minn.idv/hanzi" hzim:imeType="Chinese">
+    <DictionaryTable
+        hzim:fileName="ar30_quick_predict.tab"
+        hzim:purpose="Predict"/>
+    <DictionaryTable
+        hzim:fileName="ar30_candidate_word.tab"
+        hzim:purpose="CandidateWord"/>
+    <DictionaryTable
+        hzim:fileName="ar30_root_symbol.tab"
+        hzim:purpose="RootSymbol"/>
+    <CandidateViewColumns
+        hzim:landscape="12"
+        hzim:portrait="10"/>
+    <Setting
+        hzim:ar30qkTab="true"
+        hzim:autoCompose="true"
+        hzim:autoFullUp="true"
+        hzim:autoUpChar="true"
+        hzim:disableSelectList="w"
+        hzim:endKey="false"
+        hzim:mappingKey123ToAbc="false"
+        hzim:selectKeyShift="false"
+        hzim:spaceAutoUp="true"
+        hzim:spaceReset="true"
+        hzim:spaceSendRep1st="true"
+        hzim:wildcardEnable="true"/>
+</hziminfo>

@@ -1,0 +1,1924 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rumble Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,75..125,400..800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111417;
+      --panel: #1d2328;
+      --panel-dark: #151a1e;
+      --panel-light: #273039;
+      --line: #53616b;
+      --line-dim: #313a42;
+      --text: #f1e6cf;
+      --muted: #9ba7a9;
+      --amber: #ff9f1c;
+      --amber-hot: #ffc04d;
+      --red: #ff4f36;
+      --green: #6ee78f;
+      --blue: #7ec8ff;
+      --shadow: rgba(0, 0, 0, .42);
+      --activity: .06;
+      --pulse-speed: 900ms;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      min-height: 100%;
+      background: var(--bg);
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: "JetBrains Mono", "Share Tech Mono", monospace;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 16% 12%, rgba(255, 159, 28, .08), transparent 34rem),
+        linear-gradient(145deg, #171b1f 0%, #0d1114 58%, #171412 100%);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    body::before {
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, .025) 0,
+        rgba(255, 255, 255, .025) 1px,
+        transparent 1px,
+        transparent 4px
+      );
+      mix-blend-mode: overlay;
+      opacity: .46;
+    }
+
+    body::after {
+      background-image:
+        radial-gradient(circle at 22% 28%, rgba(255, 255, 255, .08) 0 1px, transparent 1px),
+        radial-gradient(circle at 68% 72%, rgba(255, 159, 28, .07) 0 1px, transparent 1px);
+      background-size: 46px 46px, 67px 67px;
+      opacity: .2;
+    }
+
+    button,
+    input {
+      font: inherit;
+    }
+
+    .app {
+      width: min(1220px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 24px 0 36px;
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr minmax(250px, 410px);
+      gap: 18px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+
+    .brand,
+    .status-rack,
+    .module {
+      min-width: 0;
+      border: 1px solid var(--line-dim);
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .045), transparent 26%),
+        linear-gradient(135deg, rgba(39, 48, 57, .96), rgba(18, 23, 27, .96));
+      box-shadow: 0 20px 60px var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .08);
+    }
+
+    .brand {
+      min-height: 156px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brand::before {
+      content: "";
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(255, 159, 28, .2);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .module-title,
+    .readout-title,
+    .field-label {
+      color: var(--amber-hot);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      font-family: "Share Tech Mono", monospace;
+      font-size: .82rem;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 9vw, 6rem);
+      line-height: .88;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      text-shadow: 0 0 22px rgba(255, 159, 28, .22);
+    }
+
+    .subline {
+      margin: 12px 0 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.5;
+    }
+
+    .status-rack {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .controller-state {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 64px;
+      padding: 12px;
+      background: #101519;
+      border: 1px solid #2a343d;
+    }
+
+    .lamp {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 18px rgba(255, 79, 54, .72), inset 0 0 5px rgba(255, 255, 255, .55);
+    }
+
+    .lamp.online {
+      background: var(--green);
+      box-shadow: 0 0 18px rgba(110, 231, 143, .72), inset 0 0 5px rgba(255, 255, 255, .55);
+    }
+
+    .controller-name {
+      margin: 0;
+      font-size: .95rem;
+      line-height: 1.35;
+      color: var(--text);
+      overflow-wrap: anywhere;
+    }
+
+    .controller-meta {
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .warning {
+      display: none;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 79, 54, .42);
+      background: rgba(255, 79, 54, .08);
+      color: #ffc2b8;
+      font-size: .78rem;
+      line-height: 1.45;
+    }
+
+    .warning.show {
+      display: block;
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, .9fr) minmax(320px, 1.15fr) minmax(280px, .95fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .module {
+      padding: 16px;
+    }
+
+    .module-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-width: 0;
+      margin-bottom: 14px;
+      font-size: .8rem;
+    }
+
+    .module-title span {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+
+    .plate {
+      border: 1px solid #33404a;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(0, 0, 0, .04)),
+        #11171b;
+      box-shadow: inset 0 0 28px rgba(0, 0, 0, .28);
+    }
+
+    .modes {
+      display: grid;
+      gap: 8px;
+    }
+
+    .mode {
+      position: relative;
+    }
+
+    .mode input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .mode span {
+      display: grid;
+      grid-template-columns: 16px 1fr;
+      gap: 10px;
+      align-items: center;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1px solid #36434c;
+      background: linear-gradient(180deg, #20282e, #151b20);
+      color: #d9d0bd;
+      cursor: pointer;
+      user-select: none;
+      transition: border-color .16s ease, color .16s ease, transform .16s ease;
+    }
+
+    .mode span::before {
+      content: "";
+      width: 14px;
+      height: 14px;
+      border: 1px solid #6d7b83;
+      background: #101519;
+      box-shadow: inset 0 0 0 3px #101519;
+    }
+
+    .mode input:checked + span {
+      border-color: rgba(255, 159, 28, .82);
+      color: var(--amber-hot);
+      box-shadow: inset 4px 0 0 rgba(255, 159, 28, .85);
+    }
+
+    .mode input:checked + span::before {
+      background: var(--amber);
+      box-shadow: 0 0 12px rgba(255, 159, 28, .72), inset 0 0 0 3px #101519;
+    }
+
+    .mode span:active {
+      transform: translateY(1px);
+    }
+
+    .controls {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fader {
+      display: grid;
+      grid-template-columns: 1fr minmax(72px, auto);
+      gap: 12px;
+      align-items: center;
+      padding: 12px;
+      border: 1px solid #34404a;
+      background: linear-gradient(180deg, #1a2127, #12181d);
+    }
+
+    .field-label {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+      font-size: .75rem;
+    }
+
+    .value {
+      min-width: 74px;
+      padding: 5px 7px;
+      text-align: right;
+      color: var(--green);
+      background: #09100d;
+      border: 1px solid rgba(110, 231, 143, .24);
+      text-shadow: 0 0 9px rgba(110, 231, 143, .4);
+    }
+
+    input[type="range"] {
+      grid-column: 1 / -1;
+      width: 100%;
+      height: 34px;
+      margin: 0;
+      appearance: none;
+      background: transparent;
+      cursor: pointer;
+      --fill: 50%;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 18px;
+      border: 1px solid #43515c;
+      background:
+        linear-gradient(90deg, rgba(255, 159, 28, .78) 0 var(--fill), transparent var(--fill)),
+        repeating-linear-gradient(90deg, transparent 0 23px, rgba(255, 255, 255, .08) 23px 24px),
+        linear-gradient(180deg, #0b1013, #222b32);
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, .55);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none;
+      width: 30px;
+      height: 30px;
+      margin-top: -7px;
+      border: 1px solid #0c0d0e;
+      background:
+        linear-gradient(90deg, transparent 46%, rgba(0, 0, 0, .36) 46% 54%, transparent 54%),
+        linear-gradient(180deg, #f2d9ad, #a16b24 48%, #5d3f19 49%, #d59a34);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .55);
+    }
+
+    input[type="range"]::-moz-range-track {
+      height: 18px;
+      border: 1px solid #43515c;
+      background:
+        repeating-linear-gradient(90deg, transparent 0 23px, rgba(255, 255, 255, .08) 23px 24px),
+        linear-gradient(180deg, #0b1013, #222b32);
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, .55);
+    }
+
+    input[type="range"]::-moz-range-progress {
+      height: 18px;
+      background: rgba(255, 159, 28, .78);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 30px;
+      height: 30px;
+      border: 1px solid #0c0d0e;
+      border-radius: 0;
+      background:
+        linear-gradient(90deg, transparent 46%, rgba(0, 0, 0, .36) 46% 54%, transparent 54%),
+        linear-gradient(180deg, #f2d9ad, #a16b24 48%, #5d3f19 49%, #d59a34);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, .45), inset 0 1px 0 rgba(255, 255, 255, .55);
+    }
+
+    .action-panel {
+      display: grid;
+      gap: 14px;
+    }
+
+    .fire-wrap {
+      padding: 14px;
+      background: #101519;
+      border: 1px solid #323d46;
+    }
+
+    .fire {
+      width: 100%;
+      min-height: 132px;
+      border: 1px solid #47210b;
+      color: #211203;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .42), transparent 25%),
+        linear-gradient(180deg, #ffd06a 0%, #ff9d1b 45%, #b84b10 100%);
+      box-shadow:
+        0 14px 0 #5f2509,
+        0 22px 28px rgba(0, 0, 0, .5),
+        inset 0 0 0 2px rgba(255, 241, 197, .23);
+      font-size: clamp(2.05rem, 7vw, 4rem);
+      font-weight: 800;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform .08s ease, box-shadow .08s ease, filter .14s ease;
+    }
+
+    .fire:disabled {
+      filter: grayscale(.55) brightness(.68);
+      cursor: not-allowed;
+    }
+
+    .fire:not(:disabled):active,
+    .fire.pressed {
+      transform: translateY(10px);
+      box-shadow:
+        0 4px 0 #5f2509,
+        0 10px 18px rgba(0, 0, 0, .46),
+        inset 0 0 28px rgba(69, 17, 0, .28);
+    }
+
+    .stop {
+      width: 100%;
+      min-height: 54px;
+      border: 1px solid rgba(255, 79, 54, .62);
+      background: linear-gradient(180deg, #391d1a, #1a1111);
+      color: #ffd2cc;
+      text-transform: uppercase;
+      cursor: pointer;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .08);
+    }
+
+    .stop:active {
+      transform: translateY(1px);
+    }
+
+    .scope {
+      padding: 14px;
+      min-height: 180px;
+      display: grid;
+      align-content: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scope::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255, 159, 28, .08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 159, 28, .08) 1px, transparent 1px);
+      background-size: 24px 24px;
+      opacity: .58;
+    }
+
+    .scope-inner {
+      position: relative;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 12px;
+      border: 1px solid rgba(255, 159, 28, .18);
+      background: rgba(6, 10, 11, .46);
+      overflow: hidden;
+    }
+
+    .bar {
+      flex: 1 1 0;
+      min-width: 3px;
+      height: calc(10% + (var(--activity) * 80%));
+      background: linear-gradient(180deg, var(--amber-hot), var(--amber));
+      box-shadow: 0 0 12px rgba(255, 159, 28, .52);
+      transform-origin: center;
+      animation: scopePulse var(--pulse-speed) infinite ease-in-out;
+      opacity: calc(.28 + var(--activity) * .72);
+    }
+
+    .bar:nth-child(2n) { animation-delay: -90ms; }
+    .bar:nth-child(3n) { animation-delay: -180ms; }
+    .bar:nth-child(4n) { animation-delay: -270ms; }
+    .bar:nth-child(5n) { animation-delay: -360ms; }
+    .bar:nth-child(7n) { animation-delay: -510ms; }
+
+    .scope.ramp .bar {
+      animation-name: scopeRamp;
+    }
+
+    .scope.down .bar {
+      animation-direction: reverse;
+    }
+
+    .scope.constant .bar {
+      animation-name: scopeConstant;
+    }
+
+    .scope.idle .bar {
+      animation-play-state: paused;
+      height: 9%;
+      opacity: .24;
+    }
+
+    @keyframes scopePulse {
+      0%, 100% { transform: scaleY(.32); }
+      45% { transform: scaleY(1); }
+      56% { transform: scaleY(.18); }
+    }
+
+    @keyframes scopeConstant {
+      0%, 100% { transform: scaleY(.72); }
+      50% { transform: scaleY(1); }
+    }
+
+    @keyframes scopeRamp {
+      0% { transform: scaleY(.16); opacity: .28; }
+      100% { transform: scaleY(1); opacity: 1; }
+    }
+
+    .readout {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .readout-cell {
+      min-height: 58px;
+      padding: 10px;
+      background: #0e1417;
+      border: 1px solid #2d3841;
+    }
+
+    .readout-title {
+      display: block;
+      margin-bottom: 5px;
+      font-size: .68rem;
+    }
+
+    .readout-value {
+      color: var(--green);
+      text-shadow: 0 0 8px rgba(110, 231, 143, .28);
+      overflow-wrap: anywhere;
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .preset {
+      min-height: 76px;
+      padding: 11px;
+      border: 1px solid #394650;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, .05), rgba(0, 0, 0, .08)),
+        #151c21;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .16s ease, transform .12s ease, color .16s ease;
+    }
+
+    .preset strong {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--amber-hot);
+      font-size: .86rem;
+      line-height: 1.2;
+      overflow-wrap: anywhere;
+    }
+
+    .preset small {
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    .preset:hover,
+    .preset:focus-visible {
+      border-color: rgba(255, 159, 28, .78);
+      color: #fff2d6;
+    }
+
+    .preset:active {
+      transform: translateY(1px);
+    }
+
+    .footer-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .76rem;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .brand {
+        min-height: 132px;
+      }
+
+      .preset-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .app {
+        width: min(100% - 18px, 560px);
+        padding-top: 10px;
+      }
+
+      .module,
+      .status-rack,
+      .brand {
+        padding: 12px;
+      }
+
+      .fire {
+        min-height: 104px;
+      }
+
+      .module-title {
+        flex-wrap: wrap;
+      }
+
+      .readout,
+      .preset-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fader {
+        padding: 10px;
+      }
+    }
+
+    /* Material 3 Expressive restyle inspired by the supplied Google Wallet concept. */
+    :root {
+      color-scheme: light dark;
+      --bg: #f8ead2;
+      --panel: #fffaf4;
+      --panel-dark: #eaf3f6;
+      --panel-light: #ffffff;
+      --line: rgba(40, 45, 48, .08);
+      --line-dim: rgba(40, 45, 48, .08);
+      --text: #25282b;
+      --muted: #626b70;
+      --amber: #ff9b63;
+      --amber-hot: #ff8f52;
+      --red: #ba1a1a;
+      --green: #5f7f55;
+      --blue: #5fa4bf;
+      --shadow: rgba(39, 47, 51, .14);
+      --surface: #fbfcff;
+      --surface-container: #edf5f8;
+      --surface-container-high: #ffffff;
+      --primary: #5fa4bf;
+      --primary-container: #c4ecfb;
+      --on-primary-container: #073544;
+      --secondary-container: #ffbd98;
+      --tertiary-container: #d5ffc4;
+      --outline: rgba(35, 40, 43, .11);
+      --glow: rgba(91, 132, 255, .26);
+    }
+
+    * {
+      letter-spacing: 0;
+    }
+
+    body {
+      font-family: "Roboto Flex", "Google Sans", "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 12%, rgba(196, 236, 251, .9), transparent 19rem),
+        radial-gradient(circle at 82% 8%, rgba(255, 189, 152, .78), transparent 21rem),
+        radial-gradient(circle at 76% 92%, rgba(213, 255, 196, .72), transparent 18rem),
+        var(--bg);
+    }
+
+    body::before,
+    body::after {
+      display: none;
+    }
+
+    .app {
+      width: min(1180px, calc(100% - 32px));
+      padding: 28px 0 42px;
+    }
+
+    .topbar {
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .7fr);
+      gap: 20px;
+    }
+
+    .brand,
+    .status-rack,
+    .module {
+      border: 0;
+      border-radius: 42px;
+      background: rgba(255, 250, 244, .82);
+      box-shadow: 0 20px 48px var(--shadow);
+      backdrop-filter: blur(20px);
+    }
+
+    .brand {
+      min-height: 236px;
+      padding: 30px;
+      background:
+        radial-gradient(circle at 77% 28%, var(--primary-container) 0 64px, transparent 65px),
+        linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(237, 245, 248, .9));
+      overflow: visible;
+      isolation: isolate;
+    }
+
+    .brand > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .brand::before {
+      display: none;
+    }
+
+    .brand::after {
+      content: "";
+      position: absolute;
+      top: 34px;
+      right: 34px;
+      width: 92px;
+      height: 92px;
+      border-radius: 39% 47% 38% 48% / 45% 39% 50% 41%;
+      background: var(--primary);
+      box-shadow: inset 0 0 0 14px rgba(196, 236, 251, .68);
+      animation: softMorph 7s ease-in-out infinite;
+      z-index: 0;
+      opacity: .82;
+    }
+
+    .eyebrow,
+    .module-title,
+    .readout-title,
+    .field-label {
+      color: #4f656f;
+      font-family: inherit;
+      font-weight: 760;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    .eyebrow {
+      width: fit-content;
+      padding: 9px 14px;
+      border-radius: 999px;
+      background: var(--primary-container);
+      color: var(--on-primary-container);
+      font-size: .86rem;
+    }
+
+    h1 {
+      max-width: 610px;
+      font-size: clamp(3rem, 9vw, 6.2rem);
+      line-height: .94;
+      font-weight: 800;
+      color: #24282b;
+      text-transform: none;
+      text-shadow: none;
+    }
+
+    .subline {
+      max-width: 660px;
+      margin-top: 18px;
+      color: #526168;
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .status-rack {
+      padding: 18px;
+      gap: 12px;
+      background: #24292c;
+      color: #fff;
+    }
+
+    .controller-state {
+      min-height: 110px;
+      padding: 22px;
+      border: 0;
+      border-radius: 34px;
+      background: #ffffff;
+      color: #23272a;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .5);
+    }
+
+    .lamp {
+      width: 26px;
+      height: 26px;
+      flex-basis: 26px;
+      background: #ff705d;
+      box-shadow: 0 0 0 8px rgba(255, 112, 93, .14);
+    }
+
+    .lamp.online {
+      background: #79c568;
+      box-shadow: 0 0 0 8px rgba(121, 197, 104, .18);
+    }
+
+    .controller-name {
+      font-size: 1.06rem;
+      font-weight: 760;
+      color: #24282b;
+    }
+
+    .controller-meta {
+      color: #5b676d;
+      font-size: .86rem;
+    }
+
+    .warning {
+      border: 0;
+      border-radius: 24px;
+      background: rgba(255, 189, 152, .94);
+      color: #463021;
+      font-size: .86rem;
+    }
+
+    .main-grid {
+      grid-template-columns: minmax(270px, .9fr) minmax(320px, 1.15fr) minmax(300px, 1fr);
+      gap: 20px;
+    }
+
+    .module {
+      padding: 20px;
+      background: rgba(251, 252, 255, .86);
+    }
+
+    .module-title {
+      margin-bottom: 16px;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .module-title span:last-child {
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: var(--surface-container);
+      color: #455a64;
+      font-size: .82rem;
+    }
+
+    .modes {
+      gap: 10px;
+    }
+
+    .mode span {
+      min-height: 58px;
+      grid-template-columns: 22px 1fr;
+      gap: 13px;
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 24px;
+      background: var(--surface-container);
+      color: #293033;
+      font-weight: 720;
+      box-shadow: none;
+      transition: transform .22s cubic-bezier(.2, .9, .2, 1.25), background .18s ease, color .18s ease;
+    }
+
+    .mode span::before {
+      width: 22px;
+      height: 22px;
+      border: 0;
+      border-radius: 38% 47% 42% 50% / 46% 38% 51% 44%;
+      background: #cfd9dd;
+      box-shadow: none;
+    }
+
+    .mode input:checked + span {
+      color: #3a281f;
+      background: var(--secondary-container);
+      box-shadow: none;
+    }
+
+    .mode input:checked + span::before {
+      background: #fff;
+      box-shadow: inset 0 0 0 6px #ff8f52;
+    }
+
+    .mode span:active {
+      transform: scale(.97);
+    }
+
+    .footer-note {
+      color: #5b686e;
+      font-size: .86rem;
+    }
+
+    .controls {
+      gap: 12px;
+    }
+
+    .fader {
+      padding: 14px 16px;
+      border: 0;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: inset 0 0 0 1px var(--outline);
+    }
+
+    .field-label {
+      font-size: .86rem;
+      color: #334147;
+    }
+
+    .value {
+      min-width: 82px;
+      padding: 6px 11px;
+      border: 0;
+      border-radius: 999px;
+      background: #e9f8ff;
+      color: #205569;
+      text-shadow: none;
+      font-weight: 760;
+    }
+
+    input[type="range"] {
+      height: 40px;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 18px;
+      border: 0;
+      border-radius: 999px;
+      background:
+        linear-gradient(90deg, var(--primary) 0 var(--fill), #dfe8ec var(--fill));
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .06);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      width: 34px;
+      height: 34px;
+      margin-top: -8px;
+      border: 5px solid #ffffff;
+      border-radius: 38% 47% 42% 50% / 46% 38% 51% 44%;
+      background: var(--primary);
+      box-shadow: 0 7px 16px rgba(35, 70, 86, .2);
+    }
+
+    input[type="range"]::-moz-range-track {
+      height: 18px;
+      border: 0;
+      border-radius: 999px;
+      background: #dfe8ec;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, .06);
+    }
+
+    input[type="range"]::-moz-range-progress {
+      height: 18px;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 26px;
+      height: 26px;
+      border: 5px solid #ffffff;
+      border-radius: 38% 47% 42% 50% / 46% 38% 51% 44%;
+      background: var(--primary);
+      box-shadow: 0 7px 16px rgba(35, 70, 86, .2);
+    }
+
+    .fire-wrap {
+      padding: 0;
+      border: 0;
+      background: transparent;
+    }
+
+    .fire {
+      min-height: 142px;
+      border: 0;
+      border-radius: 42px;
+      background:
+        radial-gradient(circle at 28% 20%, rgba(255, 255, 255, .55), transparent 28%),
+        linear-gradient(135deg, #ffbd98, #ff935f);
+      color: #3e2f28;
+      box-shadow: 0 18px 36px rgba(255, 143, 82, .24);
+      font-size: clamp(2.4rem, 8vw, 4.7rem);
+      font-weight: 800;
+      text-transform: none;
+      transition: transform .22s cubic-bezier(.2, .9, .2, 1.45), box-shadow .22s ease, filter .18s ease;
+    }
+
+    .fire:disabled {
+      filter: grayscale(.2) opacity(.62);
+    }
+
+    .fire:not(:disabled):active,
+    .fire.pressed {
+      transform: scale(.95);
+      box-shadow: 0 7px 18px rgba(255, 143, 82, .22);
+    }
+
+    .stop {
+      min-height: 58px;
+      border: 0;
+      border-radius: 999px;
+      background: #24292c;
+      color: #ffffff;
+      font-weight: 760;
+      text-transform: none;
+      box-shadow: 0 10px 24px rgba(36, 41, 44, .18);
+    }
+
+    .scope {
+      min-height: 190px;
+      padding: 16px;
+      border-radius: 34px;
+      border: 0;
+      background: #24292c;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .04);
+    }
+
+    .scope::before {
+      display: none;
+    }
+
+    .scope-inner {
+      height: 124px;
+      gap: 7px;
+      border: 0;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .07);
+    }
+
+    .bar {
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--primary-container), var(--primary));
+      box-shadow: none;
+    }
+
+    .readout {
+      gap: 10px;
+    }
+
+    .readout-cell {
+      min-height: 74px;
+      padding: 13px;
+      border: 0;
+      border-radius: 24px;
+      background: var(--surface-container);
+    }
+
+    .readout-title {
+      color: #5f6f76;
+      font-size: .76rem;
+      font-weight: 740;
+    }
+
+    .readout-value {
+      color: #234e5e;
+      font-weight: 800;
+      text-shadow: none;
+    }
+
+    .preset-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .preset {
+      min-height: 108px;
+      padding: 18px;
+      border: 0;
+      border-radius: 32px;
+      background: var(--surface-container);
+      color: #2b3134;
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .45);
+      transition: transform .22s cubic-bezier(.2, .9, .2, 1.25), background .18s ease;
+    }
+
+    .preset:nth-child(2),
+    .preset:nth-child(4),
+    .preset:nth-child(6) {
+      background: var(--secondary-container);
+    }
+
+    .preset:nth-child(3),
+    .preset:nth-child(5) {
+      background: var(--tertiary-container);
+    }
+
+    .preset strong {
+      color: #2d3032;
+      font-size: 1rem;
+      font-weight: 800;
+    }
+
+    .preset small {
+      color: #526066;
+      font-size: .9rem;
+    }
+
+    .preset:hover,
+    .preset:focus-visible {
+      border-color: transparent;
+      color: #1e2225;
+      transform: translateY(-2px) scale(1.01);
+    }
+
+    .preset:active {
+      transform: scale(.97);
+    }
+
+    @keyframes softMorph {
+      0%, 100% { border-radius: 39% 47% 38% 48% / 45% 39% 50% 41%; transform: rotate(0deg) scale(1); }
+      50% { border-radius: 49% 38% 47% 40% / 39% 51% 38% 49%; transform: rotate(8deg) scale(1.04); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #f8ead2;
+        --panel: #24292c;
+        --text: #f7f9fb;
+        --muted: #d3dcdf;
+        --surface: #24292c;
+        --surface-container: #32383b;
+        --surface-container-high: #3d4447;
+        --outline: rgba(255, 255, 255, .08);
+        --shadow: rgba(10, 14, 15, .22);
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 18% 12%, rgba(196, 236, 251, .45), transparent 19rem),
+          radial-gradient(circle at 82% 8%, rgba(255, 189, 152, .36), transparent 21rem),
+          #1f2528;
+      }
+
+      .brand,
+      .module {
+        background: rgba(36, 41, 44, .9);
+      }
+
+      .brand {
+        background:
+          radial-gradient(circle at 77% 28%, rgba(196, 236, 251, .5) 0 64px, transparent 65px),
+          linear-gradient(135deg, rgba(36, 41, 44, .96), rgba(36, 41, 44, .88));
+      }
+
+      h1,
+      .preset strong {
+        color: #f8fbff;
+      }
+
+      .controller-name {
+        color: #24282b;
+      }
+
+      .subline,
+      .footer-note,
+      .preset small,
+      .controller-meta {
+        color: #d0dbdf;
+      }
+
+      .controller-state,
+      .fader {
+        background: #ffffff;
+        color: #23272a;
+      }
+
+      .mode span,
+      .readout-cell {
+        background: #32383b;
+        color: #eef4f6;
+      }
+
+      .module-title span:last-child,
+      .value {
+        background: #3e494e;
+        color: #dff5ff;
+      }
+
+      .readout-value {
+        color: #c4ecfb;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .topbar,
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .preset-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .app {
+        width: min(100% - 18px, 560px);
+        padding-top: 10px;
+      }
+
+      .brand,
+      .status-rack,
+      .module {
+        border-radius: 30px;
+      }
+
+      .brand {
+        min-height: 230px;
+        padding: 22px;
+      }
+
+      .brand::after {
+        top: 86px;
+        right: 24px;
+        width: 82px;
+        height: 82px;
+      }
+
+      h1 {
+        padding-right: 88px;
+      }
+
+      .controller-state,
+      .fire,
+      .scope {
+        border-radius: 28px;
+      }
+
+      .preset-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <section class="topbar" aria-label="Rumble Lab header">
+      <div class="brand">
+        <div class="eyebrow">Dual-rumble haptics bench</div>
+        <div>
+          <h1>Rumble Lab</h1>
+          <p class="subline">Gamepad vibration testing for browsers that expose the Gamepad API haptics path. Chrome on Windows or Android is the friendly lane.</p>
+        </div>
+      </div>
+
+      <aside class="status-rack" aria-label="Controller status">
+        <div class="controller-state">
+          <span class="lamp" id="statusLamp" aria-hidden="true"></span>
+          <div>
+            <p class="controller-name" id="controllerName">waiting for controller...</p>
+            <span class="controller-meta" id="controllerMeta">polling navigator.getGamepads()</span>
+          </div>
+        </div>
+        <div class="warning" id="supportWarning">
+          No dual-rumble actuator is available on this browser/controller. Safari does not support this API; Chrome on Windows or Android works best.
+        </div>
+      </aside>
+    </section>
+
+    <section class="main-grid">
+      <div class="module">
+        <div class="module-title">
+          <span>Mode selector</span>
+          <span id="modeReadout">one-shot</span>
+        </div>
+        <div class="modes" role="radiogroup" aria-label="Vibration mode">
+          <label class="mode">
+            <input type="radio" name="mode" value="one-shot" checked>
+            <span>One-shot burst</span>
+          </label>
+          <label class="mode">
+            <input type="radio" name="mode" value="constant">
+            <span>Constant loop</span>
+          </label>
+          <label class="mode">
+            <input type="radio" name="mode" value="pulse">
+            <span>Pulse cycle</span>
+          </label>
+          <label class="mode">
+            <input type="radio" name="mode" value="ramp-up">
+            <span>Ramp up</span>
+          </label>
+          <label class="mode">
+            <input type="radio" name="mode" value="ramp-down">
+            <span>Ramp down</span>
+          </label>
+        </div>
+
+        <p class="footer-note">Constant and pulse modes are built from repeated haptic calls because the browser API does not provide native looping. Chromium uses <code>playEffect("dual-rumble")</code>; Firefox can use legacy <code>pulse()</code> when exposed.</p>
+      </div>
+
+      <div class="module controls">
+        <div class="module-title">
+          <span>Fader bank</span>
+          <span>live values</span>
+        </div>
+
+        <label class="fader">
+          <span class="field-label">strongMagnitude <output class="value" for="strongMagnitude" id="strongOut">0.80</output></span>
+          <input id="strongMagnitude" type="range" min="0" max="1" step="0.01" value="0.8">
+        </label>
+
+        <label class="fader">
+          <span class="field-label">weakMagnitude <output class="value" for="weakMagnitude" id="weakOut">0.55</output></span>
+          <input id="weakMagnitude" type="range" min="0" max="1" step="0.01" value="0.55">
+        </label>
+
+        <label class="fader">
+          <span class="field-label">duration <output class="value" for="duration" id="durationOut">450 ms</output></span>
+          <input id="duration" type="range" min="10" max="5000" step="10" value="450">
+        </label>
+
+        <label class="fader">
+          <span class="field-label">startDelay <output class="value" for="startDelay" id="delayOut">0 ms</output></span>
+          <input id="startDelay" type="range" min="0" max="1000" step="10" value="0">
+        </label>
+
+        <label class="fader">
+          <span class="field-label">pulse interval <output class="value" for="pulseInterval" id="pulseOut">200 ms</output></span>
+          <input id="pulseInterval" type="range" min="50" max="1000" step="10" value="200">
+        </label>
+      </div>
+
+      <div class="module action-panel">
+        <div class="module-title">
+          <span>Trigger bay</span>
+          <span id="activityReadout">idle</span>
+        </div>
+
+        <div class="fire-wrap">
+          <button class="fire" id="fireButton" type="button">Fire</button>
+        </div>
+        <button class="stop" id="stopButton" type="button">Stop</button>
+
+        <div class="scope plate idle" id="scope" aria-label="Vibration visualizer">
+          <div class="scope-inner" id="scopeBars" aria-hidden="true"></div>
+        </div>
+
+        <div class="readout" aria-label="Current effect readout">
+          <div class="readout-cell">
+            <span class="readout-title">Active mode</span>
+            <span class="readout-value" id="activeMode">one-shot</span>
+          </div>
+          <div class="readout-cell">
+            <span class="readout-title">Actuator</span>
+            <span class="readout-value" id="actuatorState">unknown</span>
+          </div>
+          <div class="readout-cell">
+            <span class="readout-title">Low motor</span>
+            <span class="readout-value" id="lowRead">0.80</span>
+          </div>
+          <div class="readout-cell">
+            <span class="readout-title">High motor</span>
+            <span class="readout-value" id="highRead">0.55</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="module" style="margin-top: 18px;">
+      <div class="module-title">
+        <span>Preset bank</span>
+        <span>snap and fire</span>
+      </div>
+      <div class="preset-grid" id="presetGrid"></div>
+    </section>
+  </main>
+
+  <script>
+    const state = {
+      gamepadIndex: null,
+      supported: false,
+      hapticKind: "none",
+      active: false,
+      mode: "one-shot",
+      timers: new Set(),
+      rampFrame: null,
+      lastError: ""
+    };
+
+    const els = {
+      statusLamp: document.getElementById("statusLamp"),
+      controllerName: document.getElementById("controllerName"),
+      controllerMeta: document.getElementById("controllerMeta"),
+      supportWarning: document.getElementById("supportWarning"),
+      modeReadout: document.getElementById("modeReadout"),
+      activeMode: document.getElementById("activeMode"),
+      actuatorState: document.getElementById("actuatorState"),
+      activityReadout: document.getElementById("activityReadout"),
+      fireButton: document.getElementById("fireButton"),
+      stopButton: document.getElementById("stopButton"),
+      scope: document.getElementById("scope"),
+      scopeBars: document.getElementById("scopeBars"),
+      presetGrid: document.getElementById("presetGrid"),
+      lowRead: document.getElementById("lowRead"),
+      highRead: document.getElementById("highRead")
+    };
+
+    const sliders = {
+      strongMagnitude: {
+        input: document.getElementById("strongMagnitude"),
+        output: document.getElementById("strongOut"),
+        format: value => Number(value).toFixed(2)
+      },
+      weakMagnitude: {
+        input: document.getElementById("weakMagnitude"),
+        output: document.getElementById("weakOut"),
+        format: value => Number(value).toFixed(2)
+      },
+      duration: {
+        input: document.getElementById("duration"),
+        output: document.getElementById("durationOut"),
+        format: value => `${Math.round(Number(value))} ms`
+      },
+      startDelay: {
+        input: document.getElementById("startDelay"),
+        output: document.getElementById("delayOut"),
+        format: value => `${Math.round(Number(value))} ms`
+      },
+      pulseInterval: {
+        input: document.getElementById("pulseInterval"),
+        output: document.getElementById("pulseOut"),
+        format: value => `${Math.round(Number(value))} ms`
+      }
+    };
+
+    const presets = [
+      {
+        name: "Gentle Rumble",
+        detail: "Soft confirm buzz",
+        mode: "one-shot",
+        strongMagnitude: .28,
+        weakMagnitude: .22,
+        duration: 180,
+        startDelay: 0,
+        pulseInterval: 240
+      },
+      {
+        name: "Hard Hit",
+        detail: "Short impact punch",
+        mode: "one-shot",
+        strongMagnitude: 1,
+        weakMagnitude: .82,
+        duration: 260,
+        startDelay: 0,
+        pulseInterval: 120
+      },
+      {
+        name: "Engine Idle",
+        detail: "Low steady churn",
+        mode: "constant",
+        strongMagnitude: .36,
+        weakMagnitude: .12,
+        duration: 650,
+        startDelay: 0,
+        pulseInterval: 320
+      },
+      {
+        name: "Heartbeat",
+        detail: "Two-beat thump",
+        mode: "pulse",
+        strongMagnitude: .78,
+        weakMagnitude: .2,
+        duration: 140,
+        startDelay: 0,
+        pulseInterval: 210
+      },
+      {
+        name: "Power Climb",
+        detail: "Slow rising motor",
+        mode: "ramp-up",
+        strongMagnitude: .95,
+        weakMagnitude: .65,
+        duration: 1800,
+        startDelay: 0,
+        pulseInterval: 160
+      },
+      {
+        name: "Chaos",
+        detail: "Fast uneven chatter",
+        mode: "pulse",
+        strongMagnitude: 1,
+        weakMagnitude: 1,
+        duration: 90,
+        startDelay: 20,
+        pulseInterval: 80
+      }
+    ];
+
+    function getSettings() {
+      return {
+        strongMagnitude: Number(sliders.strongMagnitude.input.value),
+        weakMagnitude: Number(sliders.weakMagnitude.input.value),
+        duration: Number(sliders.duration.input.value),
+        startDelay: Number(sliders.startDelay.input.value),
+        pulseInterval: Number(sliders.pulseInterval.input.value)
+      };
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    function updateSliderFill(input) {
+      const min = Number(input.min);
+      const max = Number(input.max);
+      const value = Number(input.value);
+      const pct = ((value - min) / (max - min)) * 100;
+      input.style.setProperty("--fill", `${pct}%`);
+    }
+
+    function updateReadouts() {
+      Object.values(sliders).forEach(({ input, output, format }) => {
+        output.value = format(input.value);
+        output.textContent = format(input.value);
+        updateSliderFill(input);
+      });
+
+      const settings = getSettings();
+      const activity = clamp((settings.strongMagnitude + settings.weakMagnitude) / 2, .04, 1);
+      document.documentElement.style.setProperty("--activity", activity.toFixed(2));
+      document.documentElement.style.setProperty("--pulse-speed", `${settings.pulseInterval * 2}ms`);
+      els.lowRead.textContent = settings.strongMagnitude.toFixed(2);
+      els.highRead.textContent = settings.weakMagnitude.toFixed(2);
+    }
+
+    function getGamepad() {
+      if (!("getGamepads" in navigator)) return null;
+      const pads = Array.from(navigator.getGamepads ? navigator.getGamepads() : []);
+      if (state.gamepadIndex !== null && pads[state.gamepadIndex]) {
+        return pads[state.gamepadIndex];
+      }
+      return pads.find(Boolean) || null;
+    }
+
+    function getHapticDriver(gamepad) {
+      if (!gamepad) return null;
+      if (gamepad.vibrationActuator && typeof gamepad.vibrationActuator.playEffect === "function") {
+        return {
+          kind: "dual-rumble",
+          actuator: gamepad.vibrationActuator
+        };
+      }
+      if (gamepad.hapticActuators && gamepad.hapticActuators[0] && typeof gamepad.hapticActuators[0].pulse === "function") {
+        return {
+          kind: "pulse",
+          actuator: gamepad.hapticActuators[0]
+        };
+      }
+      return null;
+    }
+
+    function hasHaptics(gamepad) {
+      return Boolean(getHapticDriver(gamepad));
+    }
+
+    function pollGamepads() {
+      const gamepad = getGamepad();
+      if (!gamepad) {
+        state.gamepadIndex = null;
+        state.supported = false;
+        state.hapticKind = "none";
+        els.statusLamp.classList.remove("online");
+        els.controllerName.textContent = "waiting for controller...";
+        els.controllerMeta.textContent = "polling navigator.getGamepads()";
+        els.actuatorState.textContent = "offline";
+        els.fireButton.disabled = true;
+        els.supportWarning.textContent = "No gamepad is connected yet. Pair or plug in a controller, then press any controller button if your browser needs activation.";
+        els.supportWarning.classList.remove("show");
+        return;
+      }
+
+      const driver = getHapticDriver(gamepad);
+      state.gamepadIndex = gamepad.index;
+      state.supported = hasHaptics(gamepad);
+      state.hapticKind = driver ? driver.kind : "none";
+      els.statusLamp.classList.add("online");
+      els.controllerName.textContent = gamepad.id || "Unnamed Gamepad";
+      els.controllerMeta.textContent = `index ${gamepad.index} - ${gamepad.buttons.length} buttons - ${gamepad.axes.length} axes`;
+      els.actuatorState.textContent = driver ? driver.kind : "not supported";
+      els.fireButton.disabled = !state.supported;
+      els.supportWarning.classList.toggle("show", !state.supported);
+      if (driver && driver.kind === "pulse") {
+        els.supportWarning.textContent = "Firefox fallback active: using hapticActuators[0].pulse(), so strong/weak motors are blended into one intensity.";
+        els.supportWarning.classList.add("show");
+      } else if (driver) {
+        els.supportWarning.textContent = "No dual-rumble actuator is available on this browser/controller. Firefox may use the legacy pulse() fallback; Chrome/Edge support dual-rumble best.";
+      } else {
+        els.supportWarning.textContent = "No haptic actuator is available on this browser/controller. Chrome/Edge support dual-rumble best; Firefox may expose only legacy pulse().";
+      }
+    }
+
+    function normalizeEffect(options) {
+      return {
+        duration: clamp(Math.round(options.duration), 1, 5000),
+        startDelay: clamp(Math.round(options.startDelay || 0), 0, 1000),
+        strongMagnitude: clamp(Number(options.strongMagnitude), 0, 1),
+        weakMagnitude: clamp(Number(options.weakMagnitude), 0, 1)
+      };
+    }
+
+    function reportHapticError(error, apiName) {
+      state.lastError = error && error.message ? error.message : `${apiName} failed`;
+      els.supportWarning.textContent = `The controller rejected the haptic command: ${state.lastError}`;
+      els.supportWarning.classList.add("show");
+    }
+
+    async function playHaptics(options) {
+      const gamepad = getGamepad();
+      const driver = getHapticDriver(gamepad);
+      if (!driver) {
+        pollGamepads();
+        return false;
+      }
+
+      const effect = normalizeEffect(options);
+      state.hapticKind = driver.kind;
+
+      try {
+        if (driver.kind === "dual-rumble") {
+          await driver.actuator.playEffect("dual-rumble", effect);
+        } else {
+          const runPulse = () => {
+            const intensity = clamp(Math.max(effect.strongMagnitude, effect.weakMagnitude), 0, 1);
+            driver.actuator.pulse(intensity, effect.duration).catch(error => reportHapticError(error, "pulse"));
+          };
+
+          if (effect.startDelay > 0) {
+            addTimer(setTimeout(runPulse, effect.startDelay));
+          } else {
+            runPulse();
+          }
+        }
+        state.lastError = "";
+        return true;
+      } catch (error) {
+        reportHapticError(error, driver.kind === "dual-rumble" ? "playEffect" : "pulse");
+        return false;
+      }
+    }
+
+    function addTimer(timer) {
+      state.timers.add(timer);
+      return timer;
+    }
+
+    function clearTimers() {
+      state.timers.forEach(timer => {
+        clearTimeout(timer);
+        clearInterval(timer);
+      });
+      state.timers.clear();
+
+      if (state.rampFrame !== null) {
+        cancelAnimationFrame(state.rampFrame);
+        state.rampFrame = null;
+      }
+    }
+
+    function setActivity(active, mode = state.mode) {
+      state.active = active;
+      els.activityReadout.textContent = active ? "running" : "idle";
+      els.scope.classList.toggle("idle", !active);
+      els.scope.classList.toggle("constant", active && mode === "constant");
+      els.scope.classList.toggle("ramp", active && (mode === "ramp-up" || mode === "ramp-down"));
+      els.scope.classList.toggle("down", active && mode === "ramp-down");
+    }
+
+    async function stopHapticsNow() {
+      const driver = getHapticDriver(getGamepad());
+      if (!driver) return;
+
+      try {
+        if (driver.kind === "dual-rumble") {
+          await driver.actuator.playEffect("dual-rumble", {
+            duration: 1,
+            startDelay: 0,
+            strongMagnitude: 0,
+            weakMagnitude: 0
+          });
+        } else if (typeof driver.actuator.reset === "function") {
+          await driver.actuator.reset();
+        } else {
+          await driver.actuator.pulse(0, 1);
+        }
+      } catch (error) {
+        reportHapticError(error, driver.kind === "dual-rumble" ? "playEffect" : "pulse");
+      }
+    }
+
+    async function stopAll() {
+      clearTimers();
+      setActivity(false);
+      await stopHapticsNow();
+    }
+
+    function scheduleStop(ms) {
+      addTimer(setTimeout(() => {
+        setActivity(false);
+      }, Math.max(40, ms)));
+    }
+
+    async function fireOneShot(settings) {
+      setActivity(true, "one-shot");
+      playHaptics(settings);
+      scheduleStop(settings.startDelay + settings.duration + 120);
+    }
+
+    function fireConstant(settings) {
+      setActivity(true, "constant");
+      const chunkDuration = 5000;
+      const refreshMs = 4200;
+      const startLoop = () => {
+        const playContinuousChunk = () => {
+          const liveSettings = getSettings();
+          playHaptics({
+            ...liveSettings,
+            duration: chunkDuration,
+            startDelay: 0
+          });
+        };
+
+        playContinuousChunk();
+        addTimer(setInterval(() => {
+          playContinuousChunk();
+        }, refreshMs));
+      };
+
+      if (settings.startDelay > 0) {
+        addTimer(setTimeout(startLoop, settings.startDelay));
+      } else {
+        startLoop();
+      }
+    }
+
+    function firePulse(settings) {
+      setActivity(true, "pulse");
+      let onPhase = true;
+      const onSettings = { ...settings, startDelay: 0 };
+
+      const runPhase = () => {
+        if (onPhase) {
+          playHaptics(onSettings);
+        } else {
+          playHaptics({
+            duration: Math.max(1, settings.pulseInterval),
+            startDelay: 0,
+            strongMagnitude: 0,
+            weakMagnitude: 0
+          });
+        }
+        onPhase = !onPhase;
+      };
+
+      const startPulse = () => {
+        runPhase();
+        addTimer(setInterval(runPhase, settings.pulseInterval));
+      };
+
+      if (settings.startDelay > 0) {
+        addTimer(setTimeout(startPulse, settings.startDelay));
+      } else {
+        startPulse();
+      }
+    }
+
+    function fireRamp(settings, direction) {
+      setActivity(true, direction === "up" ? "ramp-up" : "ramp-down");
+      const start = performance.now() + settings.startDelay;
+      const total = Math.max(10, settings.duration);
+      const stepMs = 80;
+      let lastStep = 0;
+
+      const tick = now => {
+        if (now < start) {
+          state.rampFrame = requestAnimationFrame(tick);
+          return;
+        }
+
+        const elapsed = now - start;
+        const progress = clamp(elapsed / total, 0, 1);
+        const factor = direction === "up" ? progress : 1 - progress;
+
+        if (now - lastStep >= stepMs || progress >= 1) {
+          lastStep = now;
+          playHaptics({
+            duration: Math.min(140, Math.max(35, stepMs + 35)),
+            startDelay: 0,
+            strongMagnitude: settings.strongMagnitude * factor,
+            weakMagnitude: settings.weakMagnitude * factor
+          });
+        }
+
+        if (progress < 1) {
+          state.rampFrame = requestAnimationFrame(tick);
+        } else {
+          state.rampFrame = null;
+          stopAll();
+        }
+      };
+
+      state.rampFrame = requestAnimationFrame(tick);
+    }
+
+    async function fireCurrent() {
+      if (!state.supported) {
+        pollGamepads();
+        return;
+      }
+
+      await stopAll();
+      const settings = getSettings();
+      state.mode = document.querySelector("input[name='mode']:checked").value;
+      els.activeMode.textContent = state.mode;
+      els.fireButton.classList.add("pressed");
+      addTimer(setTimeout(() => els.fireButton.classList.remove("pressed"), 140));
+
+      if (state.mode === "one-shot") return fireOneShot(settings);
+      if (state.mode === "constant") return fireConstant(settings);
+      if (state.mode === "pulse") return firePulse(settings);
+      if (state.mode === "ramp-up") return fireRamp(settings, "up");
+      if (state.mode === "ramp-down") return fireRamp(settings, "down");
+    }
+
+    function applyMode(mode) {
+      const input = document.querySelector(`input[name="mode"][value="${mode}"]`);
+      if (input) input.checked = true;
+      state.mode = mode;
+      els.modeReadout.textContent = mode;
+      els.activeMode.textContent = mode;
+    }
+
+    function applyPreset(preset) {
+      applyMode(preset.mode);
+      Object.keys(sliders).forEach(key => {
+        sliders[key].input.value = preset[key];
+      });
+      updateReadouts();
+      fireCurrent();
+    }
+
+    function renderPresets() {
+      presets.forEach(preset => {
+        const button = document.createElement("button");
+        button.className = "preset";
+        button.type = "button";
+        button.innerHTML = `<strong>${preset.name}</strong><small>${preset.detail}</small>`;
+        button.addEventListener("click", () => applyPreset(preset));
+        els.presetGrid.appendChild(button);
+      });
+    }
+
+    function renderBars() {
+      for (let index = 0; index < 32; index += 1) {
+        const bar = document.createElement("span");
+        bar.className = "bar";
+        bar.style.animationDuration = `${820 + (index % 9) * 38}ms`;
+        els.scopeBars.appendChild(bar);
+      }
+    }
+
+    Object.values(sliders).forEach(({ input }) => {
+      input.addEventListener("input", updateReadouts);
+    });
+
+    document.querySelectorAll("input[name='mode']").forEach(input => {
+      input.addEventListener("change", () => {
+        applyMode(input.value);
+        setActivity(state.active, input.value);
+      });
+    });
+
+    els.fireButton.addEventListener("click", fireCurrent);
+    els.stopButton.addEventListener("click", stopAll);
+
+    window.addEventListener("gamepadconnected", event => {
+      state.gamepadIndex = event.gamepad.index;
+      pollGamepads();
+    });
+
+    window.addEventListener("gamepaddisconnected", event => {
+      if (state.gamepadIndex === event.gamepad.index) {
+        stopAll();
+        state.gamepadIndex = null;
+      }
+      pollGamepads();
+    });
+
+    renderBars();
+    renderPresets();
+    updateReadouts();
+    applyMode("one-shot");
+    pollGamepads();
+    setInterval(pollGamepads, 500);
+  </script>
+</body>
+</html>

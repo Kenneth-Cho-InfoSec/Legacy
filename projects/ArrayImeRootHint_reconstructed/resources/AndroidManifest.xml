@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:versionCode="1904162136"
+    android:versionName="0.0.8_1 (24.08.20.11.51)"
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.minn.android.hanziime"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14">
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="34"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <application
+        android:label="@string/ime_name"
+        android:icon="@drawable/ic_launcher"
+        android:extractNativeLibs="true">
+        <service
+            android:name="com.minn.android.hanziime.HzimMainTWService"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method"/>
+        </service>
+        <activity
+            android:label="@string/settings_name"
+            android:name="com.minn.android.hanziime.HzimSettingsActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="1"/>
+    </application>
+</manifest>

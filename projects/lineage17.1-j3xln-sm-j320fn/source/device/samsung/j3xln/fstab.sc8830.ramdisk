@@ -1,0 +1,7 @@
+# First-stage mount table for Android 10 boot ramdisk.
+#
+# The Samsung bootloader/kernel command line exposes androidboot.hardware=sc8830,
+# so first-stage init searches for fstab.sc8830 before it can mount system.img
+# and switch root.
+
+/dev/block/platform/sdio_emmc/by-name/SYSTEM    /system    ext4    ro,barrier=1    wait,first_stage_mount

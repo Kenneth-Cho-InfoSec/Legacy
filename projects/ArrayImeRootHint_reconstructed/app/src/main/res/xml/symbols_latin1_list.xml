@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keystring>
+    <string value="@string/half_symbol_categories_txt"/>
+    <string value="!"/>
+    <string value="“"/>
+    <string value="#"/>
+    <string value="$"/>
+    <string value="%"/>
+    <string value="&amp;"/>
+    <string value="&apos;"/>
+    <string value="("/>
+    <string value=")"/>
+    <string value="*"/>
+    <string value="+"/>
+    <string value=","/>
+    <string value="-"/>
+    <string value="."/>
+    <string value="/"/>
+    <string value=":"/>
+    <string value=";"/>
+    <string value="&lt;"/>
+    <string value="="/>
+    <string value="&gt;"/>
+    <string value="?"/>
+    <string value="@"/>
+    <string value="["/>
+    <string value="\\"/>
+    <string value="]"/>
+    <string value="^"/>
+    <string value="_"/>
+    <string value="`"/>
+    <string value="{"/>
+    <string value="|"/>
+    <string value="}"/>
+    <string value="~"/>
+</keystring>

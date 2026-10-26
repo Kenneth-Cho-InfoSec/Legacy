@@ -1,0 +1,119 @@
+# ueventd.rc - Device permissions for SM-J320FN
+# Halium 7.1 compatible
+
+# ==============================================
+# Default permissions
+# ==============================================
+/dev/null                 0666   root       root
+/dev/zero                0666   root       root
+/dev/full                0666   root       root
+/dev/ptmx                0666   root       root
+/dev/tty                 0666   root       root
+/dev/random              0666   root       root
+/dev/urandom             0666   root       root
+
+# ==============================================
+# Console
+# ==============================================
+/dev/console             0600   root       log
+/dev/tty0               0660   root       system
+/dev/tty1               0660   root       system
+/dev/tty2               0660   root       system
+/dev/tty3               0660   root       system
+/dev/tty4               0660   root       system
+/dev/tty5               0660   root       system
+/dev/tty6               0660   root       system
+/dev/ttyS0              0660   root       system
+/dev/ttyS1              0660   root       system
+/dev/ttyS2              0660   root       system
+/dev/ttyS3              0660   root       system
+
+# ==============================================
+# Memory devices
+# ==============================================
+/dev/mem                 0660   root       system
+/dev/ashmem              0660   root       system
+/dev/pmem                0660   system      graphics
+
+# ==============================================
+# Block devices
+# ==============================================
+/dev/block/*             0660   root       system
+/dev/block/bootloader    0600   root       root
+/dev/block/radio         0600   root       root
+
+# ==============================================
+# Input devices
+# ==============================================
+/dev/input/*             0660   root       input
+/dev/event*             0660   root       input
+
+# ==============================================
+# Graphics devices
+# ==============================================
+/dev/graphics/*          0660   root       graphics
+/dev/fb0                 0660   root       graphics
+/dev/fb1                 0660   root       graphics
+
+# ==============================================
+# Audio devices
+# ==============================================
+/dev/snd/*               0660   system     audio
+/dev/audio               0660   system     audio
+/dev/mixer               0660   system     audio
+/dev/control             0660   system     audio
+/dev/adsp                0660   system     audio
+
+# ==============================================
+# Video devices
+# ==============================================
+/dev/video*              0660   system      camera
+/dev/media*              0660   system      camera
+
+# ==============================================
+# Bluetooth
+# ==============================================
+/dev/ttyS0               0660   bluetooth   bluetooth
+/dev/ttyS1               0660   bluetooth   bluetooth
+/dev/ttyS2               0660   bluetooth   bluetooth
+/dev/rfcomm*             0660   bluetooth   bluetooth
+/dev/uinput             0660   bluetooth   bluetooth
+
+# ==============================================
+# GPS
+# ==============================================
+/dev/ttyGPS0             0660   system      system
+
+# ==============================================
+# WiFi
+# ==============================================
+/dev/wifi                0660   wifi       wifi
+/dev/wifi Walsh          0660   wifi       wifi
+/dev/bt                  0660   bluetooth   system
+
+# ==============================================
+# Sensors
+# ==============================================
+/dev/i2c-*               0660   system      system
+
+# ==============================================
+# USB
+# ==============================================
+/dev/usb/*               0660   root       usb
+/dev/usb_adb             0666   root       root
+/dev/usb_gadget          0660   root       system
+
+# ==============================================
+# NAND/Flash
+# ==============================================
+/dev/nand*               0660   root       system
+
+# ==============================================
+# Misc
+# ==============================================
+/dev/pmsg0              0666   root       log
+/dev/watchdog           0660   root       system
+/dev/ion                0660   system      system
+/dev/tegra-agic         0660   system      system
+/dev/camera             0660   system      camera
+/dev/mdp_sync           0660   system      system

@@ -1,0 +1,107 @@
+[
+  {
+    "name": "gsettings-compile-data",
+    "id": "3a6eb07@@gsettings-compile-data@cus",
+    "type": "custom",
+    "defined_in": "/home/kenneth/GNOME-Upright/data/meson.build",
+    "filename": [
+      "/home/kenneth/GNOME-Upright/build/data/gschemas.compiled"
+    ],
+    "build_by_default": true,
+    "target_sources": [
+      {
+        "language": "unknown",
+        "compiler": [
+          "/usr/bin/glib-compile-schemas",
+          "--targetdir",
+          "data",
+          "../data"
+        ],
+        "parameters": [],
+        "sources": [],
+        "generated_sources": []
+      }
+    ],
+    "extra_files": [],
+    "subproject": null,
+    "dependencies": [],
+    "depends": [],
+    "installed": false
+  },
+  {
+    "name": "io.github.GnomeUpright.desktop",
+    "id": "3a6eb07@@io.github.GnomeUpright.desktop@cus",
+    "type": "custom",
+    "defined_in": "/home/kenneth/GNOME-Upright/data/meson.build",
+    "filename": [
+      "/home/kenneth/GNOME-Upright/build/data/io.github.GnomeUpright.desktop"
+    ],
+    "build_by_default": true,
+    "target_sources": [
+      {
+        "language": "unknown",
+        "compiler": [
+          "/usr/bin/meson",
+          "--internal",
+          "msgfmthelper",
+          "--msgfmt=/usr/bin/msgfmt",
+          "@INPUT@",
+          "@OUTPUT@",
+          "desktop",
+          "../data/../po"
+        ],
+        "parameters": [],
+        "sources": [
+          "/home/kenneth/GNOME-Upright/data/io.github.GnomeUpright.desktop.in"
+        ],
+        "generated_sources": []
+      }
+    ],
+    "extra_files": [],
+    "subproject": null,
+    "dependencies": [],
+    "depends": [],
+    "installed": true,
+    "install_filename": [
+      "/usr/local/share/applications/io.github.GnomeUpright.desktop"
+    ]
+  },
+  {
+    "name": "io.github.GnomeUpright.metainfo.xml",
+    "id": "3a6eb07@@io.github.GnomeUpright.metainfo.xml@cus",
+    "type": "custom",
+    "defined_in": "/home/kenneth/GNOME-Upright/data/meson.build",
+    "filename": [
+      "/home/kenneth/GNOME-Upright/build/data/io.github.GnomeUpright.metainfo.xml"
+    ],
+    "build_by_default": true,
+    "target_sources": [
+      {
+        "language": "unknown",
+        "compiler": [
+          "/usr/bin/meson",
+          "--internal",
+          "msgfmthelper",
+          "--msgfmt=/usr/bin/msgfmt",
+          "@INPUT@",
+          "@OUTPUT@",
+          "xml",
+          "../data/../po"
+        ],
+        "parameters": [],
+        "sources": [
+          "/home/kenneth/GNOME-Upright/data/io.github.GnomeUpright.metainfo.xml.in"
+        ],
+        "generated_sources": []
+      }
+    ],
+    "extra_files": [],
+    "subproject": null,
+    "dependencies": [],
+    "depends": [],
+    "installed": true,
+    "install_filename": [
+      "/usr/local/share/metainfo/io.github.GnomeUpright.metainfo.xml"
+    ]
+  }
+]

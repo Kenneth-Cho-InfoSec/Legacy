@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=Radiant
+GenericName=Digital Audio Workstation
+Comment=Linux-native pattern and timeline music production
+Exec=radiant-ui %U
+Icon=com.radiant.DAW
+Terminal=false
+Categories=AudioVideo;Audio;Music;
+MimeType=application/x-radiant-project;
+StartupNotify=true
+StartupWMClass=radiant-ui

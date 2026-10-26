@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="ar30_12key_preview_array_0x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_01_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_03_b</item>
+        <item>@drawable/ar30_12key_preview_04_b</item>
+        <item>@drawable/ar30_12key_preview_0m_b</item>
+        <item>@drawable/ar30_12key_preview_06_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_08_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_1x">
+        <item>@drawable/ar30_12key_preview_10_b</item>
+        <item>@drawable/ar30_12key_preview_11_b</item>
+        <item>@drawable/ar30_12key_preview_12_b</item>
+        <item>@drawable/ar30_12key_preview_13_b</item>
+        <item>@drawable/ar30_12key_preview_14_b</item>
+        <item>@drawable/ar30_12key_preview_1m_b</item>
+        <item>@drawable/ar30_12key_preview_16_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_18_b</item>
+        <item>@drawable/ar30_12key_preview_19_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_2x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_21_b</item>
+        <item>@drawable/ar30_12key_preview_22_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_2m_b</item>
+        <item>@drawable/ar30_12key_preview_26_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_28_b</item>
+        <item>@drawable/ar30_12key_preview_29_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_3x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_31_b</item>
+        <item>@drawable/ar30_12key_preview_32_b</item>
+        <item>@drawable/ar30_12key_preview_33_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_3m_b</item>
+        <item>@drawable/ar30_12key_preview_36_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_38_b</item>
+        <item>@drawable/ar30_12key_preview_39_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_4x">
+        <item>@drawable/ar30_12key_preview_40_b</item>
+        <item>@drawable/ar30_12key_preview_41_b</item>
+        <item>@drawable/ar30_12key_preview_42_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_4m_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_47_b</item>
+        <item>@drawable/ar30_12key_preview_48_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_5x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_51_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_53_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_5m_b</item>
+        <item>@drawable/ar30_12key_preview_56_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_58_b</item>
+        <item>@drawable/ar30_12key_preview_59_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_6x">
+        <item>@drawable/ar30_12key_preview_60_b</item>
+        <item>@drawable/ar30_12key_preview_61_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_63_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_6m_b</item>
+        <item>@drawable/ar30_12key_preview_66_b</item>
+        <item>@drawable/ar30_12key_preview_67_b</item>
+        <item>@drawable/ar30_12key_preview_68_b</item>
+        <item>@drawable/ar30_12key_preview_69_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_7x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_71_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_74_b</item>
+        <item>@drawable/ar30_12key_preview_7m_b</item>
+        <item>@drawable/ar30_12key_preview_76_b</item>
+        <item>@drawable/ar30_12key_preview_77_b</item>
+        <item>@drawable/ar30_12key_preview_78_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_8x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_81_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_83_b</item>
+        <item>@drawable/ar30_12key_preview_84_b</item>
+        <item>@drawable/ar30_12key_preview_8m_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_88_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_9x">
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_91_b</item>
+        <item>@drawable/ar30_12key_preview_92_b</item>
+        <item>@drawable/ar30_12key_preview_93_b</item>
+        <item>@drawable/ar30_12key_preview_94_b</item>
+        <item>@drawable/ar30_12key_preview_9m_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_xx_b</item>
+        <item>@drawable/ar30_12key_preview_98_b</item>
+        <item>@drawable/ar30_12key_preview_99_b</item>
+    </array>
+    <array name="ar30_12key_preview_array_nx">
+        <item>@drawable/ar30_12key_preview_n0_b</item>
+        <item>@drawable/ar30_12key_preview_n1_b</item>
+        <item>@drawable/ar30_12key_preview_n2_b</item>
+        <item>@drawable/ar30_12key_preview_n3_b</item>
+        <item>@drawable/ar30_12key_preview_n4_b</item>
+        <item>@drawable/ar30_12key_preview_n5_b</item>
+        <item>@drawable/ar30_12key_preview_n6_b</item>
+        <item>@drawable/ar30_12key_preview_n7_b</item>
+        <item>@drawable/ar30_12key_preview_n8_b</item>
+        <item>@drawable/ar30_12key_preview_n9_b</item>
+    </array>
+    <array name="hzim_conf_sets">
+        <item />
+        <item />
+        <item />
+        <item />
+        <item>@xml/conf_ar30</item>
+        <item>@xml/conf_ar30_12key</item>
+        <item>@xml/conf_juyin</item>
+    </array>
+    <array name="hzim_icon_sets">
+        <item>@drawable/immodeic_half_alphabet</item>
+        <item>@drawable/immodeic_half_symbol</item>
+        <item>@drawable/immodeic_half_symbol</item>
+        <item>@drawable/immodeic_half_symbol</item>
+        <item>@drawable/immodeic_hzim_ar30_abc</item>
+        <item>@drawable/immodeic_hzim_ar30_123</item>
+        <item>@drawable/immodeic_hzim_phone</item>
+    </array>
+    <array name="hzim_keyboard_sets">
+        <item>@xml/kb_qwerty</item>
+        <item>@xml/kb_symbols_0</item>
+        <item>@xml/kb_symbols_1</item>
+        <item>@xml/kb_symbols_2</item>
+        <item>@xml/kb_ar30</item>
+        <item>@xml/kb_ar30_12key</item>
+        <item>@xml/kb_juyin</item>
+    </array>
+    <array name="keyboard_skin">
+        <item>@string/preference_keyboard_android_default</item>
+        <item>@string/preference_keyboard_simple</item>
+        <item>@string/preference_keyboard_metal</item>
+    </array>
+    <array name="keyboard_skin_id">
+        <item>keyboard_android_default</item>
+        <item>keyboard_simple</item>
+        <item>keyboard_metal</item>
+    </array>
+    <array name="prefs_list_entries">
+        <item>autoCompose</item>
+        <item>autoUpChar</item>
+        <item>autoFullUp</item>
+        <item>spaceAutoUp</item>
+        <item>selectKeyShift</item>
+        <item>spaceReset</item>
+        <item>wildEnable</item>
+        <item>endKey</item>
+        <item>disableSelectList</item>
+        <item>ar30qkTab</item>
+        <item>spaceSendRep1st</item>
+        <item>mappingKey123ToAbc</item>
+    </array>
+    <array name="prefs_list_values">
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+    </array>
+</resources>

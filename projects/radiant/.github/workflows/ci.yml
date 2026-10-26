@@ -1,0 +1,29 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: clippy,rustfmt
+      - name: Install GTK4 and desktop smoke dependencies
+        run: sudo apt-get update && sudo apt-get install -y libgtk-4-dev xvfb at-spi2-core
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo fmt --all --check
+      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo test --workspace
+      - name: GTK startup and accessibility smoke
+        run: |
+          cargo build -p radiant-ui
+          timeout 8s xvfb-run -a dbus-run-session -- target/debug/radiant-ui || test $? -eq 124
+          GDK_SCALE=2 timeout 8s xvfb-run -a dbus-run-session -- target/debug/radiant-ui || test $? -eq 124
+      - name: Recovery soak
+        run: cargo run -p radiant-session --bin radiant-recovery-soak
+      - name: Verify release artifacts
+        run: test -f resources/com.radiant.DAW.desktop && test -f docs/release-matrix.md

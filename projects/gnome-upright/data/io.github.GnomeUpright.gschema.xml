@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+ <schema id="io.github.GnomeUpright" path="/io/github/GnomeUpright/">
+  <key name="volume" type="d"><default>0.8</default><summary>Output volume</summary></key>
+  <key name="tempo" type="i"><default>120</default><summary>Tempo in BPM</summary></key>
+  <key name="default-velocity" type="i"><default>100</default><summary>Default note velocity</summary></key>
+  <key name="octave" type="i"><default>3</default><summary>Lowest displayed octave</summary></key>
+  <key name="theme" type="s"><default>'system'</default><summary>Theme preference</summary></key>
+  <key name="autosave" type="b"><default>true</default><summary>Autosave recordings</summary></key>
+  <key name="last-session" type="s"><default>''</default><summary>Serialized last session</summary></key>
+  <key name="window-width" type="i"><default>920</default><summary>Window width</summary></key>
+  <key name="window-height" type="i"><default>560</default><summary>Window height</summary></key>
+  <key name="window-size-v2" type="b"><default>false</default><summary>Whether the compact default window size has been applied</summary></key>
+  <key name="key-bindings" type="a{ss}"><default>{'record': '&lt;Primary&gt;r', 'play': '&lt;Primary&gt;Return', 'stop': '&lt;Primary&gt;period', 'export': '&lt;Primary&gt;e', 'octave-up': 'F8', 'octave-down': 'F7', 'transpose-up': '&lt;Alt&gt;Up', 'transpose-down': '&lt;Alt&gt;Down'}</default><summary>Application shortcuts</summary></key>
+  <key name="piano-key-bindings" type="a{si}"><default>{'z': 48, 's': 49, 'x': 50, 'd': 51, 'c': 52, 'v': 53, 'g': 54, 'b': 55, 'h': 56, 'n': 57, 'j': 58, 'm': 59, ',': 60, 'w': 61, '.': 62, 'e': 63, '/': 64, 'l': 65, 't': 66, ';': 67, 'y': 68, "'": 69, 'u': 70, ']': 71, '\\': 72}</default><summary>Computer piano mappings</summary></key>
+  <key name="pressed-key-color" type="s"><default>'#6ca7e8'</default><summary>Pressed key color</summary></key>
+  <key name="midi-input-color" type="s"><default>'#62d5a8'</default><summary>MIDI input color</summary></key>
+  <key name="playback-color" type="s"><default>'#d6a4ff'</default><summary>Playback key color</summary></key>
+  <key name="white-key-color" type="s"><default>'#fafafa'</default><summary>White key color</summary></key>
+  <key name="black-key-color" type="s"><default>'#1e1e1e'</default><summary>Black key color</summary></key>
+  <key name="animation-intensity" type="d"><default>1.0</default><summary>Key animation intensity</summary></key>
+  <key name="glow-intensity" type="d"><default>0.5</default><summary>Key glow intensity</summary></key>
+  <key name="animation-speed" type="d"><default>1.0</default><summary>Key animation speed</summary></key>
+  <key name="show-note-names" type="b"><default>true</default><summary>Show note names</summary></key>
+  <key name="show-keyboard-labels" type="b"><default>true</default><summary>Show keyboard labels</summary></key>
+  <key name="show-velocity" type="b"><default>false</default><summary>Show MIDI velocity</summary></key>
+  <key name="audio-backend" type="s"><default>'pipewire'</default><summary>Audio backend</summary></key>
+  <key name="midi-latency" type="s"><default>'balanced'</default><summary>MIDI latency preference</summary></key>
+  <key name="piano-sound" type="s"><default>'acoustic-grand'</default><summary>Piano sound</summary></key>
+  <key name="polyphony" type="i"><default>64</default><summary>Maximum polyphony</summary></key>
+  <key name="sustain-pedal" type="b"><default>true</default><summary>Enable sustain pedal support</summary></key>
+  <key name="midi-input" type="s"><default>''</default><summary>MIDI input device</summary></key>
+  <key name="midi-output" type="s"><default>''</default><summary>MIDI output device</summary></key>
+  <key name="midi-auto-connect" type="b"><default>true</default><summary>Connect MIDI automatically</summary></key>
+  <key name="velocity-sensitivity" type="d"><default>1.0</default><summary>Velocity sensitivity</summary></key>
+  <key name="midi-channel" type="i"><default>0</default><summary>MIDI channel, zero means all channels</summary></key>
+  <key name="metronome" type="b"><default>false</default><summary>Enable metronome</summary></key>
+  <key name="count-in" type="i"><default>0</default><summary>Count-in bars</summary></key>
+  <key name="quantization" type="s"><default>'none'</default><summary>Default quantization</summary></key>
+  <key name="export-folder" type="s"><default>''</default><summary>Default MIDI export folder</summary></key>
+ </schema>
+</schemalist>

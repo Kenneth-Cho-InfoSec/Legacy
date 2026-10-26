@@ -1,0 +1,18 @@
+# fstab.sc9830 - Mount configuration for SM-J320FN on eMMC
+
+/dev/block/platform/sdio_emmc/by-name/SYSTEM    /system    ext4    ro,barrier=1                                wait
+/dev/block/platform/sdio_emmc/by-name/userdata  /data      ext4    noatime,nosuid,nodev,barrier=1,data=ordered wait,check,encryptable=footer
+/dev/block/platform/sdio_emmc/by-name/CACHE     /cache     ext4    noatime,nosuid,nodev,barrier=1              wait
+/dev/block/platform/sdio_emmc/by-name/HIDDEN    /preload   ext4    noatime,nosuid,nodev,barrier=1              wait
+/dev/block/platform/sdio_emmc/by-name/efs       /efs       ext4    ro,nosuid,nodev,noatime                     wait
+
+# Raw boot partitions are exposed for recovery / tooling, not mounted as filesystems.
+/dev/block/platform/sdio_emmc/by-name/KERNEL    /boot      emmc    defaults                                     defaults
+/dev/block/platform/sdio_emmc/by-name/RECOVERY  /recovery  emmc    defaults                                     defaults
+
+/dev/block/mmcblk1p1                            /storage/sdcard0    vfat    nosuid,nodev,noatime    wait,check
+/dev/block/usb                                  /storage/usb0       vfat    nosuid,nodev,noatime    wait,check
+
+tmpfs /data/local/tmp tmpfs nosuid,nodev,mode=1777 defaults
+tmpfs /data/ubuntu    tmpfs nosuid,nodev,mode=0755 defaults
+tmpfs /data/halium    tmpfs nosuid,nodev,mode=0755 defaults

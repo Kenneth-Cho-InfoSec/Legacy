@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cand_space_width_emoji_symbol">0dp</dimen>
+    <dimen name="key_height">85dp</dimen>
+    <dimen name="key_height_4">46dp</dimen>
+    <dimen name="key_height_4key">85dp</dimen>
+    <dimen name="key_label_text_size">26sp</dimen>
+    <dimen name="key_text_size">42sp</dimen>
+    <dimen name="keyboard_height">340dp</dimen>
+    <dimen name="symbol_keyboard_height">85dp</dimen>
+</resources>

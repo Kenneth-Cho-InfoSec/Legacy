@@ -1,0 +1,77 @@
+package p000a;
+
+import com.minn.android.hanziime.R;
+
+/* JADX INFO: renamed from: a.s */
+/* JADX INFO: loaded from: classes.dex */
+public abstract class AbstractC0021s {
+    public static final int HzimConfig_InputMethod_ar30qkTab = 0;
+    public static final int HzimConfig_InputMethod_autoCompose = 1;
+    public static final int HzimConfig_InputMethod_autoFullUp = 2;
+    public static final int HzimConfig_InputMethod_autoReset = 3;
+    public static final int HzimConfig_InputMethod_autoSelect = 4;
+    public static final int HzimConfig_InputMethod_autoUpChar = 5;
+    public static final int HzimConfig_InputMethod_beepRepeats = 6;
+    public static final int HzimConfig_InputMethod_beepWrong = 7;
+    public static final int HzimConfig_InputMethod_disableCandidateList = 8;
+    public static final int HzimConfig_InputMethod_disableSelectListKey = 9;
+    public static final int HzimConfig_InputMethod_endKey = 10;
+    public static final int HzimConfig_InputMethod_endKeyString = 11;
+    public static final int HzimConfig_InputMethod_hanziDictionaryPath = 12;
+    public static final int HzimConfig_InputMethod_icon = 13;
+    public static final int HzimConfig_InputMethod_imeName = 14;
+    public static final int HzimConfig_InputMethod_keyboard = 15;
+    public static final int HzimConfig_InputMethod_mappingKey123ToAbc = 16;
+    public static final int HzimConfig_InputMethod_phraseDictionaryPath = 17;
+    public static final int HzimConfig_InputMethod_predictDictionaryPath = 18;
+    public static final int HzimConfig_InputMethod_rootCodeDictionaryPath = 19;
+    public static final int HzimConfig_InputMethod_rootDictionaryPath = 20;
+    public static final int HzimConfig_InputMethod_selectKeyShift = 21;
+    public static final int HzimConfig_InputMethod_spaceAutoUp = 22;
+    public static final int HzimConfig_InputMethod_spaceIgnore = 23;
+    public static final int HzimConfig_InputMethod_spaceReset = 24;
+    public static final int HzimConfig_InputMethod_spaceSendRepeats1St = 25;
+    public static final int HzimConfig_InputMethod_wildcardEnable = 26;
+    public static final int KeyboardView_android_keyBackground = 2;
+    public static final int KeyboardView_android_keyPreviewHeight = 8;
+    public static final int KeyboardView_android_keyPreviewLayout = 6;
+    public static final int KeyboardView_android_keyPreviewOffset = 7;
+    public static final int KeyboardView_android_keyTextColor = 5;
+    public static final int KeyboardView_android_keyTextSize = 3;
+    public static final int KeyboardView_android_labelTextSize = 4;
+    public static final int KeyboardView_android_popupLayout = 10;
+    public static final int KeyboardView_android_shadowColor = 0;
+    public static final int KeyboardView_android_shadowRadius = 1;
+    public static final int KeyboardView_android_verticalCorrection = 9;
+    public static final int Keyboard_Key_android_codes = 0;
+    public static final int Keyboard_Key_android_iconPreview = 7;
+    public static final int Keyboard_Key_android_isModifier = 4;
+    public static final int Keyboard_Key_android_isRepeatable = 6;
+    public static final int Keyboard_Key_android_isSticky = 5;
+    public static final int Keyboard_Key_android_keyEdgeFlags = 3;
+    public static final int Keyboard_Key_android_keyIcon = 10;
+    public static final int Keyboard_Key_android_keyLabel = 9;
+    public static final int Keyboard_Key_android_keyOutputText = 8;
+    public static final int Keyboard_Key_android_keyboardMode = 11;
+    public static final int Keyboard_Key_android_popupCharacters = 2;
+    public static final int Keyboard_Key_android_popupKeyboard = 1;
+    public static final int Keyboard_Row_android_keyboardMode = 1;
+    public static final int Keyboard_Row_android_rowEdgeFlags = 0;
+    public static final int Keyboard_android_horizontalGap = 2;
+    public static final int Keyboard_android_keyHeight = 1;
+    public static final int Keyboard_android_keyWidth = 0;
+    public static final int Keyboard_android_verticalGap = 3;
+    public static final int Theme_android_backgroundDimAmount = 0;
+    public static final int WnnKeyboardView_keyBackground2nd = 0;
+    public static final int WnnKeyboardView_keyTextColor2nd = 1;
+    public static final int WnnKeyboard_Key_isSecondKey = 0;
+    public static final int[] HzimConfig = new int[0];
+    public static final int[] HzimConfig_InputMethod = {R.attr.ar30qkTab, R.attr.autoCompose, R.attr.autoFullUp, R.attr.autoReset, R.attr.autoSelect, R.attr.autoUpChar, R.attr.beepRepeats, R.attr.beepWrong, R.attr.disableCandidateList, R.attr.disableSelectListKey, R.attr.endKey, R.attr.endKeyString, R.attr.hanziDictionaryPath, R.attr.icon, R.attr.imeName, R.attr.keyboard, R.attr.mappingKey123ToAbc, R.attr.phraseDictionaryPath, R.attr.predictDictionaryPath, R.attr.rootCodeDictionaryPath, R.attr.rootDictionaryPath, R.attr.selectKeyShift, R.attr.spaceAutoUp, R.attr.spaceIgnore, R.attr.spaceReset, R.attr.spaceSendRepeats1St, R.attr.wildcardEnable};
+    public static final int[] Keyboard = {android.R.attr.keyWidth, android.R.attr.keyHeight, android.R.attr.horizontalGap, android.R.attr.verticalGap};
+    public static final int[] KeyboardView = {android.R.attr.shadowColor, android.R.attr.shadowRadius, android.R.attr.keyBackground, android.R.attr.keyTextSize, android.R.attr.labelTextSize, android.R.attr.keyTextColor, android.R.attr.keyPreviewLayout, android.R.attr.keyPreviewOffset, android.R.attr.keyPreviewHeight, android.R.attr.verticalCorrection, android.R.attr.popupLayout};
+    public static final int[] Keyboard_Key = {android.R.attr.codes, android.R.attr.popupKeyboard, android.R.attr.popupCharacters, android.R.attr.keyEdgeFlags, android.R.attr.isModifier, android.R.attr.isSticky, android.R.attr.isRepeatable, android.R.attr.iconPreview, android.R.attr.keyOutputText, android.R.attr.keyLabel, android.R.attr.keyIcon, android.R.attr.keyboardMode};
+    public static final int[] Keyboard_Row = {android.R.attr.rowEdgeFlags, android.R.attr.keyboardMode};
+    public static final int[] Theme = {android.R.attr.backgroundDimAmount};
+    public static final int[] WnnKeyboardView = {R.attr.keyBackground2nd, R.attr.keyTextColor2nd};
+    public static final int[] WnnKeyboard_Key = {R.attr.isSecondKey};
+}

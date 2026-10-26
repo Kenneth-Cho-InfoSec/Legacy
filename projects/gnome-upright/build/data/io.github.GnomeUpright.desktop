@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=GNOME Upright
+Comment=Play, record, and export piano performances
+Exec=gnome-upright %U
+Icon=io.github.GnomeUpright
+Terminal=false
+Type=Application
+Categories=AudioVideo;Audio;Midi;
+MimeType=audio/midi;audio/x-midi;
+StartupNotify=true
+DBusActivatable=true

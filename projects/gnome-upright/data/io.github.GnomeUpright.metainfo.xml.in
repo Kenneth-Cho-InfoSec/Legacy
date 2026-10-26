@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.GnomeUpright</id>
+  <name>GNOME Upright</name>
+  <summary>Play, record, and export piano performances</summary>
+  <metadata_license>CC0-1.0</metadata_license><project_license>MIT</project_license>
+  <description><p>A responsive virtual piano and MIDI workstation for GNOME.</p></description>
+  <launchable type="desktop-id">io.github.GnomeUpright.desktop</launchable>
+  <provides><mediatype>audio/midi</mediatype><mediatype>audio/x-midi</mediatype></provides>
+  <url type="homepage">https://github.com/GnomeUpright/gnome-upright</url>
+  <content_rating type="oars-1.1"/><developer_name>GNOME Upright contributors</developer_name>
+</component>

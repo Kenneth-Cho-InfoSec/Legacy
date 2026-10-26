@@ -1,0 +1,16 @@
+The Meson build system
+Version: 1.11.2
+Source dir: /home/kenneth/GNOME-Upright
+Build dir: /home/kenneth/GNOME-Upright/build
+Build type: native build
+Project name: gnome-upright
+Project version: 1.0.0
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Program python3 found: YES (/home/kenneth/.venvs/fluidsynth/bin/python3)
+Dependency gio-2.0 for build machine found: YES 2.88.2 (cached)
+Program /usr/bin/glib-compile-schemas found: YES (/usr/bin/glib-compile-schemas)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Build targets in project: 3
+
+Found ninja-1.13.2 at /usr/bin/ninja

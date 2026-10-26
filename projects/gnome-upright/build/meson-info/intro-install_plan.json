@@ -1,0 +1,53 @@
+{
+  "targets": {
+    "/home/kenneth/GNOME-Upright/build/data/io.github.GnomeUpright.desktop": {
+      "destination": "{datadir}/applications/io.github.GnomeUpright.desktop",
+      "tag": null,
+      "subproject": null,
+      "install_rpath": null,
+      "build_rpaths": []
+    },
+    "/home/kenneth/GNOME-Upright/build/data/io.github.GnomeUpright.metainfo.xml": {
+      "destination": "{datadir}/metainfo/io.github.GnomeUpright.metainfo.xml",
+      "tag": null,
+      "subproject": null,
+      "install_rpath": null,
+      "build_rpaths": []
+    }
+  },
+  "data": {
+    "/home/kenneth/GNOME-Upright/data/io.github.GnomeUpright.gschema.xml": {
+      "destination": "{datadir}/glib-2.0/schemas/io.github.GnomeUpright.gschema.xml",
+      "tag": null,
+      "subproject": null
+    },
+    "/home/kenneth/GNOME-Upright/data/icons/hicolor/scalable/apps/io.github.GnomeUpright.svg": {
+      "destination": "{datadir}/icons/hicolor/scalable/apps/io.github.GnomeUpright.svg",
+      "tag": null,
+      "subproject": null
+    },
+    "/home/kenneth/GNOME-Upright/data/icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg": {
+      "destination": "{datadir}/icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg",
+      "tag": null,
+      "subproject": null
+    }
+  },
+  "configure": {
+    "/home/kenneth/GNOME-Upright/build/src/gnome-upright": {
+      "destination": "{bindir}/gnome-upright",
+      "tag": "runtime",
+      "subproject": null
+    }
+  },
+  "install_subdirs": {
+    "/home/kenneth/GNOME-Upright/src/gnome_upright": {
+      "destination": "{py_purelib}/gnome_upright/gnome_upright",
+      "tag": null,
+      "subproject": null,
+      "exclude_dirs": [],
+      "exclude_files": [
+        "__pycache__"
+      ]
+    }
+  }
+}

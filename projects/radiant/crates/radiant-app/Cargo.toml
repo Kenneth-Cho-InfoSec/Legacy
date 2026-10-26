@@ -1,0 +1,19 @@
+[package]
+name = "radiant-app"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+radiant-commands = { path = "../radiant-commands" }
+radiant-domain = { path = "../radiant-domain" }
+radiant-session = { path = "../radiant-session" }
+serde.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

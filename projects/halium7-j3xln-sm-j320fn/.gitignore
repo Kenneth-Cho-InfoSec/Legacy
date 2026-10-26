@@ -1,0 +1,5 @@
+# Keep the repository focused on the curated source and artifacts.
+*.tmp
+*.log
+Thumbs.db
+desktop.ini

@@ -1,0 +1,53 @@
+Build started at 2026-07-22T21:08:09.964511
+Main binary: /usr/bin/python
+Build Options: 
+Python system: Linux
+The Meson build system
+Version: 1.11.2
+Source dir: /home/kenneth/GNOME-Upright
+Build dir: /home/kenneth/GNOME-Upright/build
+Build type: native build
+Project name: gnome-upright
+Project version: 1.0.0
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Program python3 found: YES (/home/kenneth/.venvs/fluidsynth/bin/python3)
+Dependency gio-2.0 for build machine found: YES 2.88.2 (cached)
+env[PKG_CONFIG_PATH]: 
+env[PKG_CONFIG]: /usr/bin/pkg-config
+-----------
+Called: `/usr/bin/pkg-config --variable=glib_compile_schemas gio-2.0` -> 0
+stdout:
+/usr/bin/glib-compile-schemas
+-----------
+Got pkg-config variable glib_compile_schemas : /usr/bin/glib-compile-schemas
+Program /usr/bin/glib-compile-schemas found: YES (/usr/bin/glib-compile-schemas)
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Build targets in project: 3
+
+Failed to guess install tag for /usr/local/share/applications/io.github.GnomeUpright.desktop
+Failed to guess install tag for /usr/local/share/metainfo/io.github.GnomeUpright.metainfo.xml
+Failed to guess install tag for /usr/local/share/glib-2.0/schemas/io.github.GnomeUpright.gschema.xml
+Failed to guess install tag for /usr/local/share/icons/hicolor/scalable/apps/io.github.GnomeUpright.svg
+Failed to guess install tag for /usr/local/share/icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg
+Failed to guess install tag for install script: /usr/bin/python /home/kenneth/GNOME-Upright/build-aux/meson/postinstall.py
+Failed to guess install tag for /usr/local/lib/python3.14/site-packages/gnome_upright/dummy
+Found ninja-1.13.2 at /usr/bin/ninja
+Failed to guess install tag for /usr/local/share/applications/io.github.GnomeUpright.desktop
+Failed to guess install tag for /usr/local/share/metainfo/io.github.GnomeUpright.metainfo.xml
+Failed to guess install tag for /usr/local/share/glib-2.0/schemas/io.github.GnomeUpright.gschema.xml
+Failed to guess install tag for /usr/local/share/icons/hicolor/scalable/apps/io.github.GnomeUpright.svg
+Failed to guess install tag for /usr/local/share/icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg
+Failed to guess install tag for install script: /usr/bin/python /home/kenneth/GNOME-Upright/build-aux/meson/postinstall.py
+Failed to guess install tag for /usr/local/lib/python3.14/site-packages/gnome_upright/dummy
+Failed to guess install tag for /usr/local/share/applications/io.github.GnomeUpright.desktop
+Failed to guess install tag for /usr/local/share/metainfo/io.github.GnomeUpright.metainfo.xml
+Failed to guess install tag for /usr/local/share/glib-2.0/schemas/io.github.GnomeUpright.gschema.xml
+Failed to guess install tag for /usr/local/share/icons/hicolor/scalable/apps/io.github.GnomeUpright.svg
+Failed to guess install tag for /usr/local/share/icons/hicolor/symbolic/apps/io.github.GnomeUpright-symbolic.svg
+Failed to guess install tag for install script: /usr/bin/python /home/kenneth/GNOME-Upright/build-aux/meson/postinstall.py
+Failed to guess install tag for /usr/local/lib/python3.14/site-packages/gnome_upright/dummy

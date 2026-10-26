@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="15%p"
+    android:keyHeight="50dp"
+    android:horizontalGap="0dp"
+    android:verticalGap="0dp">
+    <Row>
+        <Key
+            android:codes="-401"
+            android:keyEdgeFlags="left"
+            android:keyLabel="@string/key_12key_switch_juyin"/>
+        <Key
+            android:codes="-402"
+            android:keyLabel="@string/key_12key_switch_ar30"/>
+        <Key
+            android:codes="-403"
+            android:keyEdgeFlags="right"
+            android:keyLabel="@string/key_12key_switch_ar30_123"/>
+    </Row>
+</Keyboard>

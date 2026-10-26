@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ar30qkTab" format="boolean">
+    </attr>
+    <attr name="autoCompose" format="boolean">
+    </attr>
+    <attr name="autoFullUp" format="boolean">
+    </attr>
+    <attr name="autoReset" format="boolean">
+    </attr>
+    <attr name="autoSelect" format="boolean">
+    </attr>
+    <attr name="autoUpChar" format="boolean">
+    </attr>
+    <attr name="beepRepeats" format="boolean">
+    </attr>
+    <attr name="beepWrong" format="boolean">
+    </attr>
+    <attr name="disableCandidateList" format="boolean">
+    </attr>
+    <attr name="disableSelectListKey" format="string">
+    </attr>
+    <attr name="endKey" format="boolean">
+    </attr>
+    <attr name="endKeyString" format="string">
+    </attr>
+    <attr name="hanziDictionaryPath" format="string">
+    </attr>
+    <attr name="icon" format="reference">
+    </attr>
+    <attr name="imeName" format="string">
+    </attr>
+    <attr name="isSecondKey" format="boolean">
+    </attr>
+    <attr name="keyBackground2nd" format="reference">
+    </attr>
+    <attr name="keyTextColor2nd" format="color">
+    </attr>
+    <attr name="keyboard" format="reference">
+    </attr>
+    <attr name="mappingKey123ToAbc" format="boolean">
+    </attr>
+    <attr name="phraseDictionaryPath" format="string">
+    </attr>
+    <attr name="predictDictionaryPath" format="string">
+    </attr>
+    <attr name="rootCodeDictionaryPath" format="string">
+    </attr>
+    <attr name="rootDictionaryPath" format="string">
+    </attr>
+    <attr name="selectKeyShift" format="boolean">
+    </attr>
+    <attr name="spaceAutoUp" format="boolean">
+    </attr>
+    <attr name="spaceIgnore" format="boolean">
+    </attr>
+    <attr name="spaceReset" format="boolean">
+    </attr>
+    <attr name="spaceSendRepeats1St" format="boolean">
+    </attr>
+    <attr name="wildcardEnable" format="boolean">
+    </attr>
+</resources>

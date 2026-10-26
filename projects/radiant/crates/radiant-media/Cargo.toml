@@ -1,0 +1,20 @@
+[package]
+name = "radiant-media"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+claxon.workspace = true
+hound.workspace = true
+radiant-domain = { path = "../radiant-domain" }
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

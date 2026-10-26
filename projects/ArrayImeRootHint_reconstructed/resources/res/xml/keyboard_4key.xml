@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android" android:keyHeight="@dimen/key_height_4key">
+    <Row>
+        <Key
+            android:keyWidth="25%p"
+            android:codes="-300"
+            android:keyEdgeFlags="left"
+            android:keyLabel="@string/key_symbol_mode"/>
+        <Key
+            android:keyWidth="25%p"
+            android:codes="-301"
+            android:keyLabel="▲"/>
+        <Key
+            android:keyWidth="25%p"
+            android:codes="-302"
+            android:keyLabel="▼"/>
+        <Key
+            android:keyWidth="25%p"
+            android:codes="-303"
+            android:keyEdgeFlags="right"
+            android:isRepeatable="true"
+            android:iconPreview="@drawable/key_del_b"
+            android:keyIcon="@drawable/key_del"/>
+    </Row>
+</Keyboard>

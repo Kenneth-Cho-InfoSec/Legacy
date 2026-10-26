@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/candidate_tab_back"
+    android:padding="2dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:alpha="1">
+    <ImageView
+        android:id="@+id/read_more_button"
+        android:paddingRight="2dp"
+        android:layout_width="@dimen/candidate_layout_width"
+        android:layout_height="wrap_content"
+        android:soundEffectsEnabled="false"/>
+</LinearLayout>

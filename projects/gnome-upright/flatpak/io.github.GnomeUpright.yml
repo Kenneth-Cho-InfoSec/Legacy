@@ -1,0 +1,22 @@
+app-id: io.github.GnomeUpright
+runtime: org.gnome.Platform
+runtime-version: '48'
+sdk: org.gnome.Sdk
+command: gnome-upright
+finish-args:
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=all
+  - --filesystem=xdg-run/pipewire-0
+modules:
+  - name: python-dependencies
+    buildsystem: simple
+    build-commands:
+      - pip3 install --no-index --find-links=. mido python-rtmidi pyfluidsynth
+  - name: gnome-upright
+    buildsystem: meson
+    sources:
+      - type: dir
+        path: ..

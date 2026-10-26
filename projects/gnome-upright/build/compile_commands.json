@@ -1,0 +1,122 @@
+[
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/glib-compile-schemas --targetdir data ../data",
+    "file": "../data/io.github.GnomeUpright.gschema.xml",
+    "output": "data/gschemas.compiled"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../data/io.github.GnomeUpright.desktop.in data/io.github.GnomeUpright.desktop desktop ../data/../po",
+    "file": "../data/io.github.GnomeUpright.desktop.in",
+    "output": "data/io.github.GnomeUpright.desktop"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal msgfmthelper --msgfmt=/usr/bin/msgfmt ../data/io.github.GnomeUpright.metainfo.xml.in data/io.github.GnomeUpright.metainfo.xml xml ../data/../po",
+    "file": "../data/io.github.GnomeUpright.metainfo.xml.in",
+    "output": "data/io.github.GnomeUpright.metainfo.xml"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__test",
+    "output": "test"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson test --no-rebuild --print-errorlogs",
+    "file": "all",
+    "output": "meson-internal__test"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__benchmark",
+    "output": "benchmark"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson test --benchmark --logbase benchmarklog --num-processes=1 --no-rebuild",
+    "file": "all",
+    "output": "meson-internal__benchmark"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__install",
+    "output": "install"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson install --no-rebuild",
+    "file": "PHONY",
+    "output": "meson-internal__install"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__dist",
+    "output": "dist"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson dist",
+    "file": "PHONY",
+    "output": "meson-internal__dist"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__uninstall",
+    "output": "uninstall"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal uninstall",
+    "file": "PHONY",
+    "output": "meson-internal__uninstall"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "data/gschemas.compiled",
+    "output": "all"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__clean",
+    "output": "clean"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "",
+    "file": "meson-internal__clean-ctlist",
+    "output": "clean-ctlist"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal cleantrees /home/kenneth/GNOME-Upright/build/meson-private/cleantrees.dat",
+    "file": "PHONY",
+    "output": "meson-internal__clean-ctlist"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/ninja -t clean",
+    "file": "PHONY",
+    "output": "meson-internal__clean"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal regenerate /home/kenneth/GNOME-Upright .",
+    "file": "../meson.build",
+    "output": "build.ninja"
+  },
+  {
+    "directory": "/home/kenneth/GNOME-Upright/build",
+    "command": "/usr/bin/meson --internal regenerate /home/kenneth/GNOME-Upright .",
+    "file": "PHONY",
+    "output": "reconfigure"
+  }
+]

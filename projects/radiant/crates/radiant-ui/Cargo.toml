@@ -1,0 +1,20 @@
+[package]
+name = "radiant-ui"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+gtk4.workspace = true
+libadwaita.workspace = true
+radiant-app = { path = "../radiant-app" }
+radiant-audio = { path = "../radiant-audio" }
+radiant-commands = { path = "../radiant-commands" }
+radiant-domain = { path = "../radiant-domain" }
+radiant-engine = { path = "../radiant-engine" }
+ radiant-plugins = { path = "../radiant-plugins" }
+radiant-session = { path = "../radiant-session" }
+
+[lints]
+workspace = true

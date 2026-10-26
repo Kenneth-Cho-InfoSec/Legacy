@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="have_asterisk">已有*號</string>
+    <string name="have_question">已有?號</string>
+    <string name="ime_name">行列輸入法--字根提示版</string>
+    <string name="label_subtype_zh_TW">中文(繁體)行列</string>
+    <string name="more_asterisk">過多*號</string>
+    <string name="no_found_word">無此字</string>
+    <string name="preference_key_sound_summary">啟動按鍵聲音</string>
+    <string name="preference_key_sound_title">按鍵聲</string>
+    <string name="preference_key_vibration_summary">啟動按鍵振動</string>
+    <string name="preference_key_vibration_title">按鍵振動</string>
+    <string name="preference_preview_summary">啟動按鍵預覽</string>
+    <string name="preference_preview_title">顯示按鍵預覽</string>
+    <string name="repeat_words">重複字</string>
+    <string name="settings_name">行列輸入法--字根提示版 設定</string>
+</resources>

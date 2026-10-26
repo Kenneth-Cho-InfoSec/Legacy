@@ -1,0 +1,8 @@
+release-assets/
+*.img
+*.zip
+*.tar.gz
+*.7z
+*.rar
+out/
+*.log.tmp

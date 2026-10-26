@@ -1,0 +1,561 @@
+============================================
+PLATFORM_VERSION_CODENAME=REL
+PLATFORM_VERSION=10
+LINEAGE_VERSION=17.1-20260514-UNOFFICIAL-j3xln
+TARGET_PRODUCT=lineage_j3xln
+TARGET_BUILD_VARIANT=userdebug
+TARGET_BUILD_TYPE=release
+TARGET_ARCH=arm
+TARGET_ARCH_VARIANT=armv7-a-neon
+TARGET_CPU_VARIANT=cortex-a7
+HOST_ARCH=x86_64
+HOST_2ND_ARCH=x86
+HOST_OS=linux
+HOST_OS_EXTRA=Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-Ubuntu-24.04.4-LTS
+HOST_CROSS_OS=windows
+HOST_CROSS_ARCH=x86
+HOST_CROSS_2ND_ARCH=x86_64
+HOST_BUILD_TYPE=release
+BUILD_ID=QQ3A.200805.001
+OUT_DIR=out
+============================================
+ninja: no work to do.
+ninja: no work to do.
+No need to regenerate ninja file
+No need to regenerate ninja file
+No need to regenerate ninja file
+Starting ninja...
+[  0% 1/529] webview dexpreopt.config
+[  0% 2/529] Install: out/target/product/j3xln/system/product/overlay/LineageCyanAccent/LineageCyanAccent.apk
+[  0% 3/529] Install: out/target/product/j3xln/system/product/overlay/LineageGreenAccent/LineageGreenAccent.apk
+[  0% 4/529] Install: out/target/product/j3xln/system/product/overlay/LineageLatoFont/LineageLatoFont.apk
+[  0% 5/529] Install: out/target/product/j3xln/system/product/overlay/LineageNavigationBarNoHint/LineageNavigationBarNoHint.apk
+[  1% 6/529] Copy: out/target/product/j3xln/testcases/Email/Email.apk
+[  1% 7/529] Copy: out/target/product/j3xln/testcases/messaging/messaging.apk
+[  1% 8/529] Install: out/target/product/j3xln/system/product/overlay/LineageOrangeAccent/LineageOrangeAccent.apk
+[  1% 9/529] Install: out/target/product/j3xln/system/product/overlay/LineagePurpleAccent/LineagePurpleAccent.apk
+[  1% 10/529] Install: out/target/product/j3xln/system/product/overlay/LineagePinkAccent/LineagePinkAccent.apk
+[  2% 11/529] Install: out/target/product/j3xln/system/product/overlay/LineageRedAccent/LineageRedAccent.apk
+[  2% 12/529] Install: out/target/product/j3xln/system/product/overlay/LineageRubikFont/LineageRubikFont.apk
+[  2% 13/529] Install: out/target/product/j3xln/system/product/overlay/LineageYellowAccent/LineageYellowAccent.apk
+[  2% 14/529] webview dexpreopt gen
+[  2% 15/529] Install: out/target/product/j3xln/system/product/priv-app/OneTimeInitializer/OneTimeInitializer.apk
+[  3% 16/529] target Package: Camera2 (out/target/product/j3xln/obj/APPS/Camera2_intermediates/package.apk)
+[  3% 17/529] target Package: ThemePicker (out/target/product/j3xln/obj/APPS/ThemePicker_intermediates/package.apk)
+[  3% 18/529] Install: out/target/product/j3xln/system/product/priv-app/WallpaperCropper/WallpaperCropper.apk
+[  3% 19/529] Install: out/target/product/j3xln/system/product/priv-app/Eleven/Eleven.apk
+[  3% 20/529] Install: out/target/product/j3xln/system/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk
+[  3% 21/529] //frameworks/base/packages/SystemUI:SystemUI for javac
+[  4% 22/529] Copy: out/target/common/obj/APPS/SystemUI_intermediates/classes.jar
+[  4% 23/529] target Package: Contacts (out/target/product/j3xln/obj/APPS/Contacts_intermediates/package.apk)
+[  4% 24/529] target Package: Gallery2 (out/target/product/j3xln/obj/APPS/Gallery2_intermediates/package.apk)
+[  4% 25/529] //frameworks/base/test-base:android.test.base hiddenapi encode dex
+[  4% 26/529] //frameworks/base/test-base:android.test.base align
+[  5% 27/529] Copy: out/target/common/obj/JAVA_LIBRARIES/android.test.base_intermediates/javalib.jar
+[  5% 28/529] //frameworks/base/test-base:android.test.base dexpreopt strip
+[  5% 29/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/android.test.base_intermediates/javalib.jar
+[  5% 30/529] Install: out/target/product/j3xln/system/framework/android.test.base.jar
+[  5% 31/529] //external/apache-xml:apache-xml hiddenapi encode dex
+[  6% 32/529] //external/apache-xml:apache-xml align
+[  6% 33/529] //external/apache-xml:apache-xml for dex resources
+[  6% 34/529] //external/apache-xml:apache-xml align
+[  6% 35/529] Copy: out/target/common/obj/JAVA_LIBRARIES/apache-xml_intermediates/javalib.jar
+[  6% 36/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.runtime.release.apache-xml_intermediates/javalib.jar
+[  6% 37/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.runtime.release.apache-xml_intermediates/javalib.jar
+[  7% 38/529] Install: out/target/product/j3xln/system/apex/com.android.runtime.release/javalib/apache-xml.jar
+[  7% 39/529] //external/apache-xml:apache-xml dexpreopt strip
+[  7% 40/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/apache-xml_intermediates/javalib.jar
+[  7% 41/529] target Prebuilt: webview (out/target/product/j3xln/obj/APPS/webview_intermediates/package.apk)
+[  7% 42/529] //external/bouncycastle:bouncycastle hiddenapi encode dex
+[  8% 43/529] //external/bouncycastle:bouncycastle align
+[  8% 44/529] Copy: out/target/common/obj/JAVA_LIBRARIES/bouncycastle_intermediates/javalib.jar
+[  8% 45/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.runtime.release.bouncycastle_intermediates/javalib.jar
+[  8% 46/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.runtime.release.bouncycastle_intermediates/javalib.jar
+[  8% 47/529] Install: out/target/product/j3xln/system/apex/com.android.runtime.release/javalib/bouncycastle.jar
+[  9% 48/529] //external/bouncycastle:bouncycastle dexpreopt strip
+[  9% 49/529] //external/conscrypt:conscrypt hiddenapi encode dex
+[  9% 50/529] //external/conscrypt:conscrypt align
+[  9% 51/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/bouncycastle_intermediates/javalib.jar
+[  9% 52/529] Copy: out/target/common/obj/JAVA_LIBRARIES/conscrypt_intermediates/javalib.jar
+[ 10% 53/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.conscrypt.conscrypt_intermediates/javalib.jar
+[ 10% 54/529] //external/conscrypt:conscrypt dexpreopt strip
+[ 10% 55/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/conscrypt_intermediates/javalib.jar
+[ 10% 56/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.conscrypt.conscrypt_intermediates/javalib.jar
+[ 10% 57/529] Install: out/target/product/j3xln/system/apex/com.android.conscrypt/javalib/conscrypt.jar
+[ 10% 58/529] Install: out/target/product/j3xln/fake_packages/com.android.conscrypt-timestamp
+[ 11% 59/529] target Package: TrebuchetQuickStep (out/target/product/j3xln/obj/APPS/TrebuchetQuickStep_intermediates/package.apk)
+[ 11% 60/529] //libcore:core-libart hiddenapi encode dex
+[ 11% 61/529] //libcore:core-libart align
+[ 11% 62/529] //libcore:core-libart for dex resources
+[ 11% 63/529] //libcore:core-libart align
+[ 12% 64/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.runtime.release.core-libart_intermediates/javalib.jar
+[ 12% 65/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.runtime.release.core-libart_intermediates/javalib.jar
+[ 12% 66/529] Copy: out/target/common/obj/JAVA_LIBRARIES/core-libart_intermediates/javalib.jar
+[ 12% 67/529] Install: out/target/product/j3xln/system/apex/com.android.runtime.release/javalib/core-libart.jar
+[ 12% 68/529] //libcore:core-libart dexpreopt strip
+[ 13% 69/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/core-libart_intermediates/javalib.jar
+[ 13% 70/529] //frameworks/base:ext hiddenapi encode dex
+[ 13% 71/529] //frameworks/base:ext align
+[ 13% 72/529] //frameworks/base:ext for dex resources
+[ 13% 73/529] //frameworks/base:ext align
+[ 13% 74/529] Copy: out/target/common/obj/JAVA_LIBRARIES/ext_intermediates/javalib.jar
+[ 14% 75/529] //frameworks/base:ext dexpreopt strip
+[ 14% 76/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/ext_intermediates/javalib.jar
+[ 14% 77/529] Install: out/target/product/j3xln/system/framework/ext.jar
+[ 14% 78/529] //libcore:core-oj hiddenapi encode dex
+[ 14% 79/529] //libcore:core-oj align
+[ 15% 80/529] //libcore:core-oj for dex resources
+[ 15% 81/529] //libcore:core-oj align
+[ 15% 82/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.runtime.release.core-oj_intermediates/javalib.jar
+[ 15% 83/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.runtime.release.core-oj_intermediates/javalib.jar
+[ 15% 84/529] Copy: out/target/common/obj/JAVA_LIBRARIES/core-oj_intermediates/javalib.jar
+[ 16% 85/529] Install: out/target/product/j3xln/system/apex/com.android.runtime.release/javalib/core-oj.jar
+[ 16% 86/529] //libcore:core-oj dexpreopt strip
+[ 16% 87/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/core-oj_intermediates/javalib.jar
+[ 16% 88/529] //frameworks/opt/net/ims:ims-common hiddenapi encode dex
+[ 16% 89/529] //frameworks/opt/net/ims:ims-common align
+[ 17% 90/529] Copy: out/target/common/obj/JAVA_LIBRARIES/ims-common_intermediates/javalib.jar
+[ 17% 91/529] //frameworks/opt/net/ims:ims-common dexpreopt strip
+[ 17% 92/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/ims-common_intermediates/javalib.jar
+[ 17% 93/529] Install: out/target/product/j3xln/system/framework/ims-common.jar
+[ 17% 94/529] //external/okhttp:okhttp hiddenapi encode dex
+[ 17% 95/529] //external/okhttp:okhttp align
+[ 18% 96/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.runtime.release.okhttp_intermediates/javalib.jar
+[ 18% 97/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.runtime.release.okhttp_intermediates/javalib.jar
+[ 18% 98/529] Copy: out/target/common/obj/JAVA_LIBRARIES/okhttp_intermediates/javalib.jar
+[ 18% 99/529] Install: out/target/product/j3xln/system/apex/com.android.runtime.release/javalib/okhttp.jar
+[ 18% 100/529] Install: out/target/product/j3xln/fake_packages/com.android.runtime.release-timestamp
+[ 19% 101/529] Install: out/target/product/j3xln/fake_packages/com.android.runtime-timestamp
+[ 19% 102/529] //frameworks/base:framework hiddenapi encode dex
+[ 19% 103/529] //frameworks/base:framework align
+[ 19% 104/529] Copy: out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/javalib.jar
+[ 19% 105/529] //frameworks/base:framework dexpreopt strip
+[ 20% 106/529] //frameworks/opt/telephony:telephony-common hiddenapi encode dex
+[ 20% 107/529] //external/okhttp:okhttp dexpreopt strip
+[ 20% 108/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/okhttp_intermediates/javalib.jar
+[ 20% 109/529] //frameworks/opt/telephony:telephony-common align
+[ 20% 110/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/framework_intermediates/javalib.jar
+[ 20% 111/529] target Package: Settings (out/target/product/j3xln/obj/APPS/Settings_intermediates/package.apk)
+[ 21% 112/529] Copy: out/target/common/obj/JAVA_LIBRARIES/telephony-common_intermediates/javalib.jar
+[ 21% 113/529] //frameworks/opt/telephony:telephony-common dexpreopt strip
+[ 21% 114/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/telephony-common_intermediates/javalib.jar
+[ 21% 115/529] //frameworks/base/media:updatable-media hiddenapi encode dex
+[ 21% 116/529] //frameworks/base/media:updatable-media align
+[ 22% 117/529] Install: out/target/product/j3xln/system/framework/framework.jar
+[ 22% 118/529] Install: out/target/product/j3xln/system/framework/telephony-common.jar
+[ 22% 119/529] Copy: out/target/common/obj/JAVA_LIBRARIES/updatable-media_intermediates/javalib.jar
+[ 22% 120/529] Copy: out/target/common/obj/JAVA_LIBRARIES/com.android.media.updatable-media_intermediates/javalib.jar
+[ 22% 121/529] //frameworks/base/media:updatable-media dexpreopt strip
+[ 23% 122/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/com.android.media.updatable-media_intermediates/javalib.jar
+[ 23% 123/529] cp out/soong/j3xln/dex_bootjars_input/core-oj.jar
+[ 23% 124/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/updatable-media_intermediates/javalib.jar
+[ 23% 125/529] Install: out/target/product/j3xln/system/apex/com.android.media/javalib/updatable-media.jar
+[ 23% 126/529] cp out/soong/j3xln/dex_bootjars_input/core-libart.jar
+[ 24% 127/529] cp out/soong/j3xln/dex_bootjars_input/okhttp.jar
+[ 24% 128/529] Install: out/target/product/j3xln/fake_packages/com.android.media-timestamp
+[ 24% 129/529] cp out/soong/j3xln/dex_bootjars_input/bouncycastle.jar
+[ 24% 130/529] cp out/soong/j3xln/dex_bootjars_input/apache-xml.jar
+[ 24% 131/529] cp out/soong/j3xln/dex_bootjars_input/telephony-common.jar
+[ 24% 132/529] cp out/soong/j3xln/dex_bootjars_input/ext.jar
+[ 25% 133/529] cp out/soong/j3xln/dex_bootjars_input/android.test.base.jar
+[ 25% 134/529] cp out/soong/j3xln/dex_bootjars_input/ims-common.jar
+[ 25% 135/529] cp out/soong/j3xln/dex_bootjars_input/framework.jar
+[ 25% 136/529] //frameworks/opt/net/voip:voip-common hiddenapi encode dex
+[ 25% 137/529] //frameworks/opt/net/voip:voip-common align
+[ 26% 138/529] //frameworks/opt/net/voip:voip-common dexpreopt strip
+[ 26% 139/529] Copy: out/target/common/obj/JAVA_LIBRARIES/voip-common_intermediates/javalib.jar
+[ 26% 140/529] cp out/soong/j3xln/dex_bootjars_input/voip-common.jar
+[ 26% 141/529] Copy: out/target/product/j3xln/obj/JAVA_LIBRARIES/voip-common_intermediates/javalib.jar
+[ 26% 142/529] Install: out/target/product/j3xln/system/framework/voip-common.jar
+[ 27% 143/529] profile boot jars
+[ 27% 144/529] Copy: out/target/product/j3xln/system/etc/boot-image.prof
+[ 27% 145/529] //art/build/apex:com.android.runtime.release apex (image)
+[ 27% 146/529] //art/build/apex:com.android.runtime.release signapk
+[ 27% 147/529] //art/build/apex:art-check-release-apex-gen generate art-check-release-apex-gen.dummy
+--bitness=auto, trying to autodetect. This may be incorrect!
+  Detected 32-only
+[ 27% 148/529] //art/build/apex:art-check-release-apex-gen-fakebin prebuilt [linux_glibc]
+[ 28% 149/529] //art/build/apex:art-check-release-apex-gen-fakebin install art-check-release-apex-gen-fakebin [linux_glibc]
+[ 28% 150/529] host Prebuilt: art-check-release-apex-gen-fakebin (out/host/linux-x86/obj/EXECUTABLES/art-check-release-apex-gen-fakebin_intermediates/art-check-release-apex-gen-fakebin)
+[ 28% 151/529] Install: out/host/linux-x86/bin/art-check-release-apex-gen-fakebin
+[ 28% 152/529] Install: out/host/linux-x86/fake_packages/com.android.runtime-timestamp
+[ 28% 153/529] dexpreopt boot jars arm
+[ 29% 154/529] ExtShared dexpreopt
+[ 29% 155/529] PrintRecommendationService dexpreopt
+[ 29% 156/529] Install: out/target/product/j3xln/system/app/ExtShared/ExtShared.apk
+[ 29% 157/529] SimAppDialog dexpreopt
+[ 29% 158/529] Install: out/target/product/j3xln/system/app/PrintRecommendationService/PrintRecommendationService.apk
+[ 30% 159/529] Install: out/target/product/j3xln/system/app/SimAppDialog/SimAppDialog.apk
+[ 30% 160/529] Profiles dexpreopt
+[ 30% 161/529] inputlib dexpreopt
+[ 30% 162/529] monkeylib dexpreopt
+[ 30% 163/529] Install: out/target/product/j3xln/system/app/Profiles/Profiles.apk
+[ 31% 164/529] Install: out/target/product/j3xln/system/framework/input.jar
+[ 31% 165/529] Install: out/target/product/j3xln/system/framework/monkey.jar
+[ 31% 166/529] Install: out/target/product/j3xln/system/bin/input
+[ 31% 167/529] Install: out/target/product/j3xln/system/bin/monkey
+[ 31% 168/529] Copy: out/target/product/j3xln/system/framework/arm/boot.oat
+[ 31% 169/529] Copy: out/target/product/j3xln/system/framework/arm/boot-core-libart.art
+[ 32% 170/529] Copy: out/target/product/j3xln/system/framework/arm/boot-core-libart.oat
+[ 32% 171/529] svclib dexpreopt
+[ 32% 172/529] Copy: out/target/product/j3xln/system/framework/arm/boot-okhttp.art
+[ 32% 173/529] Copy: out/target/product/j3xln/system/framework/arm/boot-okhttp.oat
+[ 32% 174/529] Copy: out/target/product/j3xln/system/framework/arm/boot-bouncycastle.art
+[ 33% 175/529] Copy: out/target/product/j3xln/system/framework/arm/boot-bouncycastle.oat
+[ 33% 176/529] Copy: out/target/product/j3xln/system/framework/arm/boot-apache-xml.art
+[ 33% 177/529] Install: out/target/product/j3xln/system/framework/svc.jar
+[ 33% 178/529] Copy: out/target/product/j3xln/system/framework/arm/boot-apache-xml.oat
+[ 33% 179/529] Install: out/target/product/j3xln/system/bin/svc
+[ 34% 180/529] Copy: out/target/product/j3xln/system/framework/arm/boot-framework.art
+[ 34% 181/529] Copy: out/target/product/j3xln/system/framework/arm/boot-framework.oat
+[ 34% 182/529] Copy: out/target/product/j3xln/system/framework/arm/boot-ext.art
+[ 34% 183/529] Copy: out/target/product/j3xln/system/framework/arm/boot-telephony-common.art
+[ 34% 184/529] Copy: out/target/product/j3xln/system/framework/arm/boot-ext.oat
+[ 34% 185/529] Copy: out/target/product/j3xln/system/framework/arm/boot-telephony-common.oat
+[ 35% 186/529] Copy: out/target/product/j3xln/system/framework/arm/boot-voip-common.art
+[ 35% 187/529] Copy: out/target/product/j3xln/system/framework/arm/boot-voip-common.oat
+[ 35% 188/529] Copy: out/target/product/j3xln/system/framework/arm/boot-ims-common.art
+[ 35% 189/529] Copy: out/target/product/j3xln/system/framework/arm/boot-ims-common.oat
+[ 35% 190/529] Copy: out/target/product/j3xln/system/framework/arm/boot-android.test.base.art
+[ 36% 191/529] Copy: out/target/product/j3xln/system/framework/arm/boot-android.test.base.oat
+[ 36% 192/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-core-libart.oat
+[ 36% 193/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-okhttp.oat
+[ 36% 194/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-bouncycastle.oat
+[ 36% 195/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-apache-xml.oat
+[ 37% 196/529] appwidget dexpreopt
+[ 37% 197/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-ext.oat
+[ 37% 198/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-telephony-common.oat
+[ 37% 199/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-framework.oat
+[ 37% 200/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-voip-common.oat
+[ 37% 201/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-ims-common.oat
+[ 38% 202/529] am dexpreopt
+[ 38% 203/529] Install: out/target/product/j3xln/system/framework/appwidget.jar
+[ 38% 204/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot-android.test.base.oat
+[ 38% 205/529] Copy: out/target/product/j3xln/symbols/system/framework/arm/boot.oat
+[ 38% 206/529] Install: out/target/product/j3xln/system/framework/boot-core-libart.vdex
+[ 39% 207/529] Install: out/target/product/j3xln/system/framework/boot-okhttp.vdex
+[ 39% 208/529] Install: out/target/product/j3xln/system/framework/boot-bouncycastle.vdex
+[ 39% 209/529] Install: out/target/product/j3xln/system/framework/boot-apache-xml.vdex
+[ 39% 210/529] Install: out/target/product/j3xln/system/framework/boot-framework.vdex
+[ 39% 211/529] Install: out/target/product/j3xln/system/framework/am.jar
+[ 40% 212/529] Install: out/target/product/j3xln/system/framework/boot-ext.vdex
+[ 40% 213/529] Install: out/target/product/j3xln/system/framework/boot-voip-common.vdex
+[ 40% 214/529] Install: out/target/product/j3xln/system/framework/boot-telephony-common.vdex
+[ 40% 215/529] Install: out/target/product/j3xln/system/framework/boot-ims-common.vdex
+[ 40% 216/529] Install: out/target/product/j3xln/system/framework/boot-android.test.base.vdex
+[ 41% 217/529] Install: out/target/product/j3xln/system/framework/boot.vdex
+[ 41% 218/529] Copy: out/target/product/j3xln/system/framework/arm/boot.art
+[ 41% 219/529] Bluetooth dexpreopt
+[ 41% 220/529] Install: out/target/product/j3xln/system/app/Bluetooth/Bluetooth.apk
+[ 41% 221/529] content dexpreopt
+[ 41% 222/529] bu dexpreopt
+[ 42% 223/529] hid dexpreopt
+[ 42% 224/529] dpm dexpreopt
+[ 42% 225/529] Install: out/target/product/j3xln/system/framework/content.jar
+[ 42% 226/529] Install: out/target/product/j3xln/system/framework/hid.jar
+[ 42% 227/529] Install: out/target/product/j3xln/system/framework/bu.jar
+[ 43% 228/529] Install: out/target/product/j3xln/system/framework/dpm.jar
+[ 43% 229/529] locksettings dexpreopt
+[ 43% 230/529] Install: out/target/product/j3xln/system/framework/locksettings.jar
+[ 43% 231/529] requestsync dexpreopt
+[ 43% 232/529] Install: out/target/product/j3xln/system/framework/requestsync.jar
+[ 44% 233/529] telecom dexpreopt
+[ 44% 234/529] sm dexpreopt
+[ 44% 235/529] uiautomator dexpreopt
+[ 44% 236/529] Install: out/target/product/j3xln/system/framework/sm.jar
+[ 44% 237/529] Install: out/target/product/j3xln/system/framework/telecom.jar
+[ 44% 238/529] Install: out/target/product/j3xln/system/framework/uiautomator.jar
+[ 45% 239/529] vr dexpreopt
+[ 45% 240/529] Install: out/target/product/j3xln/system/framework/vr.jar
+[ 45% 241/529] DynamicSystemInstallationService dexpreopt
+[ 45% 242/529] Install: out/target/product/j3xln/system/priv-app/DynamicSystemInstallationService/DynamicSystemInstallationService.apk
+[ 45% 243/529] InputDevices dexpreopt
+[ 46% 244/529] Install: out/target/product/j3xln/system/priv-app/InputDevices/InputDevices.apk
+[ 46% 245/529] MtpDocumentsProvider dexpreopt
+[ 46% 246/529] Install: out/target/product/j3xln/system/priv-app/MtpDocumentsProvider/MtpDocumentsProvider.apk
+[ 46% 247/529] LineageSetupWizard dexpreopt
+[ 46% 248/529] Install: out/target/product/j3xln/system/priv-app/LineageSetupWizard/LineageSetupWizard.apk
+[ 47% 249/529] Shell dexpreopt
+[ 47% 250/529] Install: out/target/product/j3xln/system/priv-app/Shell/Shell.apk
+[ 47% 251/529] ManagedProvisioning dexpreopt
+[ 47% 252/529] AudioFX dexpreopt
+[ 47% 253/529] Install: out/target/product/j3xln/system/priv-app/ManagedProvisioning/ManagedProvisioning.apk
+[ 48% 254/529] Install: out/target/product/j3xln/system/priv-app/AudioFX/AudioFX.apk
+[ 48% 255/529] Updater dexpreopt
+[ 48% 256/529] Install: out/target/product/j3xln/system/priv-app/Updater/Updater.apk
+[ 48% 257/529] TeleService dexpreopt
+[ 48% 258/529] Install: out/target/product/j3xln/system/priv-app/TeleService/TeleService.apk
+[ 48% 259/529] Exchange2 dexpreopt
+[ 49% 260/529] Install: out/target/product/j3xln/system/product/app/Exchange2/Exchange2.apk
+[ 49% 261/529] wifi-service dexpreopt
+[ 49% 262/529] Email dexpreopt
+[ 49% 263/529] Install: out/target/product/j3xln/system/product/app/Email/Email.apk
+[ 49% 264/529] Camera2 dexpreopt
+[ 50% 265/529] Install: out/target/product/j3xln/system/product/priv-app/Camera2/Camera2.apk
+[ 50% 266/529] webview dexpreopt
+[ 50% 267/529] messaging dexpreopt
+[ 50% 268/529] Install: out/target/product/j3xln/system/product/app/messaging/messaging.apk
+[ 50% 269/529] Install: out/target/product/j3xln/system/product/app/webview/webview.apk
+[ 51% 270/529] StorageManager dexpreopt
+[ 51% 271/529] Contacts dexpreopt
+[ 51% 272/529] Install: out/target/product/j3xln/system/product/priv-app/StorageManager/StorageManager.apk
+[ 51% 273/529] Install: out/target/product/j3xln/system/product/priv-app/Contacts/Contacts.apk
+[ 51% 274/529] Gallery2 dexpreopt
+[ 51% 275/529] Install: out/target/product/j3xln/system/product/priv-app/Gallery2/Gallery2.apk
+[ 52% 276/529] //frameworks/base/packages/BackupRestoreConfirmation:BackupRestoreConfirmation dexpreopt
+[ 52% 277/529] Copy: out/target/product/j3xln/system/priv-app/BackupRestoreConfirmation/oat/arm/BackupRestoreConfirmation.odex
+[ 52% 278/529] Copy: out/target/product/j3xln/system/priv-app/BackupRestoreConfirmation/oat/arm/BackupRestoreConfirmation.vdex
+[ 52% 279/529] //packages/screensavers/Basic:BasicDreams dexpreopt
+[ 52% 280/529] Copy: out/target/product/j3xln/system/app/BasicDreams/oat/arm/BasicDreams.odex
+[ 53% 281/529] Copy: out/target/product/j3xln/system/app/BasicDreams/oat/arm/BasicDreams.vdex
+[ 53% 282/529] //packages/providers/BlockedNumberProvider:BlockedNumberProvider dexpreopt
+[ 53% 283/529] Copy: out/target/product/j3xln/system/priv-app/BlockedNumberProvider/oat/arm/BlockedNumberProvider.odex
+[ 53% 284/529] Copy: out/target/product/j3xln/system/priv-app/BlockedNumberProvider/oat/arm/BlockedNumberProvider.vdex
+[ 53% 285/529] //frameworks/base/media/packages/BluetoothMidiService:BluetoothMidiService dexpreopt
+[ 54% 286/529] Copy: out/target/product/j3xln/system/app/BluetoothMidiService/oat/arm/BluetoothMidiService.odex
+[ 54% 287/529] Copy: out/target/product/j3xln/system/app/BluetoothMidiService/oat/arm/BluetoothMidiService.vdex
+[ 54% 288/529] //packages/providers/BookmarkProvider:BookmarkProvider dexpreopt
+[ 54% 289/529] Copy: out/target/product/j3xln/system/app/BookmarkProvider/oat/arm/BookmarkProvider.odex
+[ 54% 290/529] Copy: out/target/product/j3xln/system/app/BookmarkProvider/oat/arm/BookmarkProvider.vdex
+[ 55% 291/529] //packages/services/BuiltInPrintService:BuiltInPrintService dexpreopt
+[ 55% 292/529] Copy: out/target/product/j3xln/system/app/BuiltInPrintService/oat/arm/BuiltInPrintService.odex
+[ 55% 293/529] Copy: out/target/product/j3xln/system/app/BuiltInPrintService/oat/arm/BuiltInPrintService.vdex
+[ 55% 294/529] //packages/providers/CalendarProvider:CalendarProvider dexpreopt
+[ 55% 295/529] Copy: out/target/product/j3xln/system/priv-app/CalendarProvider/oat/arm/CalendarProvider.odex
+[ 55% 296/529] Copy: out/target/product/j3xln/system/priv-app/CalendarProvider/oat/arm/CalendarProvider.vdex
+[ 56% 297/529] //packages/modules/CaptivePortalLogin:CaptivePortalLogin dexpreopt
+[ 56% 298/529] Copy: out/target/product/j3xln/system/app/CaptivePortalLogin/oat/arm/CaptivePortalLogin.odex
+[ 56% 299/529] Copy: out/target/product/j3xln/system/app/CaptivePortalLogin/oat/arm/CaptivePortalLogin.vdex
+[ 56% 300/529] //frameworks/base/packages/SystemUI:SystemUI r8
+[ 56% 301/529] Copy: out/target/common/obj/APPS/SystemUI_intermediates/proguard_dictionary
+[ 57% 302/529] Settings dexpreopt
+[ 57% 303/529] ThemePicker dexpreopt
+[ 57% 304/529] //packages/apps/CertInstaller:CertInstaller dexpreopt
+[ 57% 305/529] Copy: out/target/product/j3xln/system/app/CertInstaller/oat/arm/CertInstaller.odex
+[ 57% 306/529] Copy: out/target/product/j3xln/system/app/CertInstaller/oat/arm/CertInstaller.vdex
+[ 58% 307/529] Install: out/target/product/j3xln/system/product/priv-app/ThemePicker/ThemePicker.apk
+[ 58% 308/529] //frameworks/base/packages/CompanionDeviceManager:CompanionDeviceManager dexpreopt
+[ 58% 309/529] Copy: out/target/product/j3xln/system/app/CompanionDeviceManager/oat/arm/CompanionDeviceManager.odex
+[ 58% 310/529] Copy: out/target/product/j3xln/system/app/CompanionDeviceManager/oat/arm/CompanionDeviceManager.vdex
+[ 58% 311/529] Install: out/target/product/j3xln/system/product/priv-app/Settings/Settings.apk
+[ 58% 312/529] //packages/apps/CellBroadcastReceiver:CellBroadcastReceiver dexpreopt
+[ 59% 313/529] Copy: out/target/product/j3xln/system/priv-app/CellBroadcastReceiver/oat/arm/CellBroadcastReceiver.odex
+[ 59% 314/529] Copy: out/target/product/j3xln/system/priv-app/CellBroadcastReceiver/oat/arm/CellBroadcastReceiver.vdex
+[ 59% 315/529] //packages/providers/ContactsProvider:ContactsProvider dexpreopt
+[ 59% 316/529] Copy: out/target/product/j3xln/system/priv-app/ContactsProvider/oat/arm/ContactsProvider.odex
+[ 59% 317/529] Copy: out/target/product/j3xln/system/priv-app/ContactsProvider/oat/arm/ContactsProvider.vdex
+[ 60% 318/529] //packages/providers/DownloadProvider/ui:DownloadProviderUi dexpreopt
+[ 60% 319/529] Copy: out/target/product/j3xln/system/priv-app/DownloadProviderUi/oat/arm/DownloadProviderUi.odex
+[ 60% 320/529] Copy: out/target/product/j3xln/system/priv-app/DownloadProviderUi/oat/arm/DownloadProviderUi.vdex
+[ 60% 321/529] //packages/providers/DownloadProvider:DownloadProvider dexpreopt
+[ 60% 322/529] Copy: out/target/product/j3xln/system/priv-app/DownloadProvider/oat/arm/DownloadProvider.odex
+[ 61% 323/529] Copy: out/target/product/j3xln/system/priv-app/DownloadProvider/oat/arm/DownloadProvider.vdex
+[ 61% 324/529] //frameworks/base/packages/EasterEgg:EasterEgg dexpreopt
+[ 61% 325/529] Copy: out/target/product/j3xln/system/app/EasterEgg/oat/arm/EasterEgg.odex
+[ 61% 326/529] Copy: out/target/product/j3xln/system/app/EasterEgg/oat/arm/EasterEgg.vdex
+[ 61% 327/529] //packages/apps/DeskClock:DeskClock dexpreopt
+[ 62% 328/529] Copy: out/target/product/j3xln/system/product/app/DeskClock/oat/arm/DeskClock.odex
+[ 62% 329/529] Copy: out/target/product/j3xln/system/product/app/DeskClock/oat/arm/DeskClock.vdex
+[ 62% 330/529] //packages/apps/ExactCalculator:ExactCalculator dexpreopt
+[ 62% 331/529] Copy: out/target/product/j3xln/system/product/app/ExactCalculator/oat/arm/ExactCalculator.odex
+[ 62% 332/529] Copy: out/target/product/j3xln/system/product/app/ExactCalculator/oat/arm/ExactCalculator.vdex
+[ 62% 333/529] //packages/modules/ExtServices:ExtServices dexpreopt
+[ 63% 334/529] Copy: out/target/product/j3xln/system/priv-app/ExtServices/oat/arm/ExtServices.odex
+[ 63% 335/529] Copy: out/target/product/j3xln/system/priv-app/ExtServices/oat/arm/ExtServices.vdex
+[ 63% 336/529] //packages/apps/DocumentsUI:DocumentsUI dexpreopt
+[ 63% 337/529] Copy: out/target/product/j3xln/system/priv-app/DocumentsUI/oat/arm/DocumentsUI.odex
+[ 63% 338/529] Copy: out/target/product/j3xln/system/priv-app/DocumentsUI/oat/arm/DocumentsUI.vdex
+[ 64% 339/529] //frameworks/base/packages/ExternalStorageProvider:ExternalStorageProvider dexpreopt
+[ 64% 340/529] Copy: out/target/product/j3xln/system/priv-app/ExternalStorageProvider/oat/arm/ExternalStorageProvider.odex
+[ 64% 341/529] Copy: out/target/product/j3xln/system/priv-app/ExternalStorageProvider/oat/arm/ExternalStorageProvider.vdex
+[ 64% 342/529] //packages/apps/HTMLViewer:HTMLViewer dexpreopt
+[ 64% 343/529] Copy: out/target/product/j3xln/system/app/HTMLViewer/oat/arm/HTMLViewer.odex
+[ 65% 344/529] //frameworks/base/packages/FusedLocation:FusedLocation dexpreopt
+[ 65% 345/529] Copy: out/target/product/j3xln/system/app/HTMLViewer/oat/arm/HTMLViewer.vdex
+[ 65% 346/529] Copy: out/target/product/j3xln/system/priv-app/FusedLocation/oat/arm/FusedLocation.odex
+[ 65% 347/529] Copy: out/target/product/j3xln/system/priv-app/FusedLocation/oat/arm/FusedLocation.vdex
+[ 65% 348/529] //packages/apps/Etar:Etar dexpreopt
+[ 65% 349/529] Copy: out/target/product/j3xln/system/product/app/Etar/oat/arm/Etar.odex
+[ 66% 350/529] Copy: out/target/product/j3xln/system/product/app/Etar/oat/arm/Etar.vdex
+[ 66% 351/529] //packages/apps/KeyChain:KeyChain dexpreopt
+[ 66% 352/529] Copy: out/target/product/j3xln/system/app/KeyChain/oat/arm/KeyChain.odex
+[ 66% 353/529] //packages/apps/Eleven:Eleven dexpreopt
+[ 66% 354/529] Copy: out/target/product/j3xln/system/app/KeyChain/oat/arm/KeyChain.vdex
+[ 67% 355/529] Copy: out/target/product/j3xln/system/product/priv-app/Eleven/oat/arm/Eleven.odex
+[ 67% 356/529] //packages/inputmethods/LatinIME/java:LatinIME dexpreopt
+[ 67% 357/529] Copy: out/target/product/j3xln/system/product/priv-app/Eleven/oat/arm/Eleven.vdex
+[ 67% 358/529] Copy: out/target/product/j3xln/system/product/app/LatinIME/oat/arm/LatinIME.odex
+[ 67% 359/529] Copy: out/target/product/j3xln/system/product/app/LatinIME/oat/arm/LatinIME.vdex
+[ 68% 360/529] //packages/apps/Jelly/app/src/main:Jelly dexpreopt
+[ 68% 361/529] Copy: out/target/product/j3xln/system/product/app/Jelly/oat/arm/Jelly.odex
+[ 68% 362/529] //frameworks/base/packages/LocalTransport:LocalTransport dexpreopt
+[ 68% 363/529] Copy: out/target/product/j3xln/system/product/app/Jelly/oat/arm/Jelly.vdex
+[ 68% 364/529] Copy: out/target/product/j3xln/system/priv-app/LocalTransport/oat/arm/LocalTransport.odex
+[ 68% 365/529] Copy: out/target/product/j3xln/system/priv-app/LocalTransport/oat/arm/LocalTransport.vdex
+[ 69% 366/529] //lineage-sdk/packages/LineageSettingsProvider:LineageSettingsProvider dexpreopt
+[ 69% 367/529] Copy: out/target/product/j3xln/system/priv-app/LineageSettingsProvider/oat/arm/LineageSettingsProvider.odex
+[ 69% 368/529] Copy: out/target/product/j3xln/system/priv-app/LineageSettingsProvider/oat/arm/LineageSettingsProvider.vdex
+[ 69% 369/529] //packages/providers/MediaProvider:MediaProvider dexpreopt
+[ 69% 370/529] Copy: out/target/product/j3xln/system/priv-app/MediaProvider/oat/arm/MediaProvider.odex
+[ 70% 371/529] Copy: out/target/product/j3xln/system/priv-app/MediaProvider/oat/arm/MediaProvider.vdex
+[ 70% 372/529] //packages/services/Mms:MmsService dexpreopt
+[ 70% 373/529] //packages/apps/LineageParts:LineageParts dexpreopt
+[ 70% 374/529] Copy: out/target/product/j3xln/system/priv-app/MmsService/oat/arm/MmsService.odex
+[ 70% 375/529] Copy: out/target/product/j3xln/system/priv-app/LineageParts/oat/arm/LineageParts.odex
+[ 71% 376/529] Copy: out/target/product/j3xln/system/priv-app/LineageParts/oat/arm/LineageParts.vdex
+[ 71% 377/529] Copy: out/target/product/j3xln/system/priv-app/MmsService/oat/arm/MmsService.vdex
+[ 71% 378/529] //packages/modules/NetworkPermissionConfig:NetworkPermissionConfig dexpreopt
+[ 71% 379/529] Copy: out/target/product/j3xln/system/priv-app/NetworkPermissionConfig/oat/arm/NetworkPermissionConfig.odex
+[ 71% 380/529] Copy: out/target/product/j3xln/system/priv-app/NetworkPermissionConfig/oat/arm/NetworkPermissionConfig.vdex
+[ 72% 381/529] Install: out/target/product/j3xln/system/priv-app/NetworkStack/NetworkStack.apk
+[ 72% 382/529] TrebuchetQuickStep dexpreopt
+[ 72% 383/529] //packages/apps/OneTimeInitializer:OneTimeInitializer dexpreopt
+[ 72% 384/529] Copy: out/target/product/j3xln/system/product/priv-app/OneTimeInitializer/oat/arm/OneTimeInitializer.odex
+[ 72% 385/529] //packages/wallpapers/LivePicker:LiveWallpapersPicker dexpreopt
+[ 72% 386/529] Copy: out/target/product/j3xln/system/app/LiveWallpapersPicker/oat/arm/LiveWallpapersPicker.odex
+[ 73% 387/529] Copy: out/target/product/j3xln/system/product/priv-app/OneTimeInitializer/oat/arm/OneTimeInitializer.vdex
+[ 73% 388/529] Copy: out/target/product/j3xln/system/app/LiveWallpapersPicker/oat/arm/LiveWallpapersPicker.vdex
+[ 73% 389/529] //packages/modules/NetworkStack:NetworkStack dexpreopt
+[ 73% 390/529] //frameworks/base/packages/OsuLogin:OsuLogin dexpreopt
+[ 73% 391/529] Copy: out/target/product/j3xln/system/priv-app/NetworkStack/oat/arm/NetworkStack.odex
+[ 74% 392/529] Copy: out/target/product/j3xln/system/app/OsuLogin/oat/arm/OsuLogin.odex
+[ 74% 393/529] Copy: out/target/product/j3xln/system/app/OsuLogin/oat/arm/OsuLogin.vdex
+[ 74% 394/529] Install: out/target/product/j3xln/system/product/priv-app/TrebuchetQuickStep/TrebuchetQuickStep.apk
+[ 74% 395/529] Copy: out/target/product/j3xln/system/priv-app/NetworkStack/oat/arm/NetworkStack.vdex
+[ 74% 396/529] //frameworks/base/packages/services/PacProcessor:PacProcessor dexpreopt
+[ 75% 397/529] Copy: out/target/product/j3xln/system/app/PacProcessor/oat/arm/PacProcessor.odex
+[ 75% 398/529] Copy: out/target/product/j3xln/system/app/PacProcessor/oat/arm/PacProcessor.vdex
+[ 75% 399/529] //frameworks/base/packages/services/Proxy:ProxyHandler dexpreopt
+[ 75% 400/529] Copy: out/target/product/j3xln/system/priv-app/ProxyHandler/oat/arm/ProxyHandler.odex
+[ 75% 401/529] Copy: out/target/product/j3xln/system/priv-app/ProxyHandler/oat/arm/ProxyHandler.vdex
+[ 75% 402/529] //packages/screensavers/PhotoTable:PhotoTable dexpreopt
+[ 76% 403/529] Copy: out/target/product/j3xln/system/product/app/PhotoTable/oat/arm/PhotoTable.odex
+[ 76% 404/529] Copy: out/target/product/j3xln/system/product/app/PhotoTable/oat/arm/PhotoTable.vdex
+[ 76% 405/529] //frameworks/base/packages/PackageInstaller:PackageInstaller dexpreopt
+[ 76% 406/529] Copy: out/target/product/j3xln/system/priv-app/PackageInstaller/oat/arm/PackageInstaller.odex
+[ 76% 407/529] Copy: out/target/product/j3xln/system/priv-app/PackageInstaller/oat/arm/PackageInstaller.vdex
+[ 77% 408/529] //frameworks/base/packages/PrintSpooler:PrintSpooler dexpreopt
+[ 77% 409/529] Copy: out/target/product/j3xln/system/app/PrintSpooler/oat/arm/PrintSpooler.odex
+[ 77% 410/529] Copy: out/target/product/j3xln/system/app/PrintSpooler/oat/arm/PrintSpooler.vdex
+[ 77% 411/529] //packages/apps/SecureElement:SecureElement dexpreopt
+[ 77% 412/529] Copy: out/target/product/j3xln/system/app/SecureElement/oat/arm/SecureElement.odex
+[ 78% 413/529] Copy: out/target/product/j3xln/system/app/SecureElement/oat/arm/SecureElement.vdex
+[ 78% 414/529] //packages/apps/Recorder/app/src/main:Recorder dexpreopt
+[ 78% 415/529] Copy: out/target/product/j3xln/system/product/app/Recorder/oat/arm/Recorder.odex
+[ 78% 416/529] Copy: out/target/product/j3xln/system/product/app/Recorder/oat/arm/Recorder.vdex
+[ 78% 417/529] //frameworks/base/packages/SharedStorageBackup:SharedStorageBackup dexpreopt
+[ 79% 418/529] Copy: out/target/product/j3xln/system/priv-app/SharedStorageBackup/oat/arm/SharedStorageBackup.odex
+[ 79% 419/529] Copy: out/target/product/j3xln/system/priv-app/SharedStorageBackup/oat/arm/SharedStorageBackup.vdex
+[ 79% 420/529] //packages/apps/PermissionController:PermissionController dexpreopt
+[ 79% 421/529] //packages/apps/SettingsIntelligence:SettingsIntelligence dexpreopt
+[ 79% 422/529] Copy: out/target/product/j3xln/system/priv-app/PermissionController/oat/arm/PermissionController.odex
+[ 79% 423/529] Copy: out/target/product/j3xln/system/priv-app/PermissionController/oat/arm/PermissionController.vdex
+[ 80% 424/529] Copy: out/target/product/j3xln/system/product/priv-app/SettingsIntelligence/oat/arm/SettingsIntelligence.odex
+[ 80% 425/529] Copy: out/target/product/j3xln/system/product/priv-app/SettingsIntelligence/oat/arm/SettingsIntelligence.vdex
+[ 80% 426/529] //frameworks/base/packages/SystemUI:SystemUI align
+[ 80% 427/529] //frameworks/base/packages/StatementService:StatementService dexpreopt
+[ 80% 428/529] Copy: out/target/product/j3xln/system/priv-app/StatementService/oat/arm/StatementService.odex
+[ 81% 429/529] Copy: out/target/product/j3xln/system/priv-app/StatementService/oat/arm/StatementService.vdex
+[ 81% 430/529] //frameworks/base/packages/SystemUI:SystemUI dexpreopt strip
+[ 81% 431/529] //packages/apps/Seedvault:Seedvault dexpreopt
+[ 81% 432/529] out/soong/host/linux-x86/bin/merge_zips out/soong/.intermediates/frameworks/base/packages/SystemUI/SystemUI/android_common/SystemUI-unsigned.apk out/soong/.intermediates/frameworks/base/packages/SystemUI/SystemUI/android_common/dexpreopt/SystemUI.jar out/soong/.intermediates/frameworks/base/packages/SystemUI/SystemUI/android_common/package-res.apk
+[ 81% 433/529] Copy: out/target/product/j3xln/system/priv-app/Seedvault/oat/arm/Seedvault.odex
+[ 82% 434/529] Copy: out/target/product/j3xln/system/priv-app/Seedvault/oat/arm/Seedvault.vdex
+[ 82% 435/529] //frameworks/base/packages/SettingsProvider:SettingsProvider dexpreopt
+[ 82% 436/529] Copy: out/target/product/j3xln/system/priv-app/SettingsProvider/oat/arm/SettingsProvider.odex
+[ 82% 437/529] Copy: out/target/product/j3xln/system/priv-app/SettingsProvider/oat/arm/SettingsProvider.vdex
+[ 82% 438/529] //packages/providers/TelephonyProvider:TelephonyProvider dexpreopt
+[ 82% 439/529] Copy: out/target/product/j3xln/system/priv-app/TelephonyProvider/oat/arm/TelephonyProvider.odex
+[ 83% 440/529] Copy: out/target/product/j3xln/system/priv-app/TelephonyProvider/oat/arm/TelephonyProvider.vdex
+[ 83% 441/529] //packages/apps/Stk:Stk dexpreopt
+[ 83% 442/529] Copy: out/target/product/j3xln/system/app/Stk/oat/arm/Stk.odex
+[ 83% 443/529] Copy: out/target/product/j3xln/system/app/Stk/oat/arm/Stk.vdex
+[ 83% 444/529] //packages/providers/UserDictionaryProvider:UserDictionaryProvider dexpreopt
+[ 84% 445/529] Copy: out/target/product/j3xln/system/priv-app/UserDictionaryProvider/oat/arm/UserDictionaryProvider.odex
+[ 84% 446/529] Copy: out/target/product/j3xln/system/priv-app/UserDictionaryProvider/oat/arm/UserDictionaryProvider.vdex
+[ 84% 447/529] //packages/apps/Terminal:Terminal dexpreopt
+[ 84% 448/529] Copy: out/target/product/j3xln/system/app/Terminal/oat/arm/Terminal.odex
+[ 84% 449/529] Copy: out/target/product/j3xln/system/app/Terminal/oat/arm/Terminal.vdex
+[ 85% 450/529] //frameworks/base/packages/VpnDialogs:VpnDialogs dexpreopt
+[ 85% 451/529] Copy: out/target/product/j3xln/system/priv-app/VpnDialogs/oat/arm/VpnDialogs.odex
+[ 85% 452/529] Copy: out/target/product/j3xln/system/priv-app/VpnDialogs/oat/arm/VpnDialogs.vdex
+[ 85% 453/529] //frameworks/base/packages/WAPPushManager:WAPPushManager dexpreopt
+[ 85% 454/529] Copy: out/target/product/j3xln/system/app/WAPPushManager/oat/arm/WAPPushManager.odex
+[ 86% 455/529] Copy: out/target/product/j3xln/system/app/WAPPushManager/oat/arm/WAPPushManager.vdex
+[ 86% 456/529] //frameworks/base/packages/WallpaperBackup:WallpaperBackup dexpreopt
+[ 86% 457/529] Copy: out/target/product/j3xln/system/app/WallpaperBackup/oat/arm/WallpaperBackup.odex
+[ 86% 458/529] Copy: out/target/product/j3xln/system/app/WallpaperBackup/oat/arm/WallpaperBackup.vdex
+[ 86% 459/529] //frameworks/base/packages/SystemUI:SystemUI signapk
+[ 86% 460/529] //frameworks/base/packages/WallpaperCropper:WallpaperCropper dexpreopt
+[ 87% 461/529] //packages/apps/Traceur:Traceur dexpreopt
+[ 87% 462/529] Copy: out/target/product/j3xln/system/product/priv-app/WallpaperCropper/oat/arm/WallpaperCropper.odex
+[ 87% 463/529] Copy: out/target/product/j3xln/system/app/Traceur/oat/arm/Traceur.odex
+[ 87% 464/529] Copy: out/target/product/j3xln/system/app/Traceur/oat/arm/Traceur.vdex
+[ 87% 465/529] Copy: out/target/product/j3xln/system/product/priv-app/WallpaperCropper/oat/arm/WallpaperCropper.vdex
+[ 88% 466/529] //system/libhidl/transport/base/1.0:android.hidl.base-V1.0-java dexpreopt
+[ 88% 467/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.hidl.base-V1.0-java.odex
+[ 88% 468/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.hidl.base-V1.0-java.vdex
+[ 88% 469/529] //system/libhidl/transport/manager/1.0:android.hidl.manager-V1.0-java dexpreopt
+[ 88% 470/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.hidl.manager-V1.0-java.odex
+[ 89% 471/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.hidl.manager-V1.0-java.vdex
+[ 89% 472/529] //frameworks/base/test-mock:android.test.mock dexpreopt
+[ 89% 473/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.test.mock.odex
+[ 89% 474/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.test.mock.vdex
+[ 89% 475/529] //frameworks/base/test-runner:android.test.runner dexpreopt
+[ 89% 476/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.test.runner.odex
+[ 90% 477/529] Copy: out/target/product/j3xln/system/framework/oat/arm/android.test.runner.vdex
+[ 90% 478/529] //frameworks/base/libs/usb:com.android.future.usb.accessory dexpreopt
+[ 90% 479/529] //frameworks/base/cmds/bmgr:bmgr dexpreopt
+[ 90% 480/529] Copy: out/target/product/j3xln/system/framework/oat/arm/bmgr.odex
+[ 90% 481/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.future.usb.accessory.odex
+[ 91% 482/529] Copy: out/target/product/j3xln/system/framework/oat/arm/bmgr.vdex
+[ 91% 483/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.future.usb.accessory.vdex
+[ 91% 484/529] //packages/services/Telecomm:Telecom dexpreopt
+[ 91% 485/529] Copy: out/target/product/j3xln/system/priv-app/Telecom/oat/arm/Telecom.odex
+[ 91% 486/529] Copy: out/target/product/j3xln/system/priv-app/Telecom/oat/arm/Telecom.vdex
+[ 92% 487/529] //frameworks/base/location/lib:com.android.location.provider dexpreopt
+[ 92% 488/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.location.provider.odex
+[ 92% 489/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.location.provider.vdex
+[ 92% 490/529] //frameworks/base/media/lib/remotedisplay:com.android.media.remotedisplay dexpreopt
+[ 92% 491/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.media.remotedisplay.odex
+[ 93% 492/529] //frameworks/base/media/lib/signer:com.android.mediadrm.signer dexpreopt
+[ 93% 493/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.media.remotedisplay.vdex
+[ 93% 494/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.mediadrm.signer.odex
+[ 93% 495/529] Copy: out/target/product/j3xln/system/framework/oat/arm/com.android.mediadrm.signer.vdex
+[ 93% 496/529] //frameworks/opt/net/ethernet:ethernet-service dexpreopt
+[ 93% 497/529] //frameworks/base/obex:javax.obex dexpreopt
+[ 94% 498/529] Copy: out/target/product/j3xln/system/framework/oat/arm/ethernet-service.odex
+[ 94% 499/529] Copy: out/target/product/j3xln/system/framework/oat/arm/ethernet-service.vdex
+[ 94% 500/529] Copy: out/target/product/j3xln/system/framework/oat/arm/javax.obex.odex
+[ 94% 501/529] Copy: out/target/product/j3xln/system/framework/oat/arm/javax.obex.vdex
+[ 94% 502/529] //frameworks/base/cmds/media:media dexpreopt
+[ 95% 503/529] Copy: out/target/product/j3xln/system/framework/oat/arm/media.odex
+[ 95% 504/529] Copy: out/target/product/j3xln/system/framework/oat/arm/media.vdex
+[ 95% 505/529] //external/apache-http:org.apache.http.legacy dexpreopt
+[ 95% 506/529] Copy: out/target/product/j3xln/system/framework/oat/arm/org.apache.http.legacy.odex
+[ 95% 507/529] Copy: out/target/product/j3xln/system/framework/oat/arm/org.apache.http.legacy.vdex
+[ 96% 508/529] Copy: out/target/product/j3xln/system/framework/org.apache.http.legacy.jar.prof
+[ 96% 509/529] Copy: out/target/product/j3xln/obj/APPS/SystemUI_intermediates/package.apk
+[ 96% 510/529] Install: out/target/product/j3xln/system/product/priv-app/SystemUI/SystemUI.apk
+[ 96% 511/529] //lineage-sdk:org.lineageos.platform dexpreopt
+[ 96% 512/529] Copy: out/target/product/j3xln/system/framework/oat/arm/org.lineageos.platform.vdex
+[ 96% 513/529] Copy: out/target/product/j3xln/system/framework/oat/arm/org.lineageos.platform.odex
+[ 97% 514/529] //frameworks/base/packages/SystemUI:SystemUI dexpreopt
+[ 97% 515/529] Copy: out/target/product/j3xln/system/product/priv-app/SystemUI/oat/arm/SystemUI.vdex
+[ 97% 516/529] Copy: out/target/product/j3xln/system/product/priv-app/SystemUI/oat/arm/SystemUI.odex
+[ 97% 517/529] //frameworks/base/services:services dexpreopt
+[ 97% 518/529] Copy: out/target/product/j3xln/system/framework/services.jar.prof
+[ 98% 519/529] Copy: out/target/product/j3xln/system/framework/oat/arm/services.vdex
+[ 98% 520/529] Copy: out/target/product/j3xln/system/framework/oat/arm/services.art
+[ 98% 521/529] Copy: out/target/product/j3xln/system/framework/oat/arm/services.odex
+[ 98% 522/529] Copy init script: out/target/product/j3xln/system/etc/init/wifi-events.rc
+[ 98% 523/529] Install: out/target/product/j3xln/system/framework/wifi-service.jar
+[ 99% 524/529] build out/target/product/j3xln/obj/NOTICE.html
+[ 99% 525/529] build out/target/product/j3xln/obj/NOTICE.html.gz
+[ 99% 526/529] build out/target/product/j3xln/system/etc/NOTICE.html.gz
+[ 99% 527/529] Installed file list: out/target/product/j3xln/installed-files.txt
+[ 99% 528/529] Target system fs image: out/target/product/j3xln/obj/PACKAGING/systemimage_intermediates/system.img
+[100% 529/529] Install system fs image: out/target/product/j3xln/system.img
+
+[0;32m#### build completed successfully (02:32 (mm:ss)) ####[00m
+

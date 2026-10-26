@@ -1,0 +1,4 @@
+your 131072x1 screen size is bogus. expect trouble
+including device/samsung/j3xln/vendorsetup.sh
+device/samsung/j3xln/vendorsetup.sh:2: add_lunch_combo is obsolete. Use COMMON_LUNCH_CHOICES in your AndroidProducts.mk instead.
+device/samsung/j3xln/vendorsetup.sh:3: add_lunch_combo is obsolete. Use COMMON_LUNCH_CHOICES in your AndroidProducts.mk instead.

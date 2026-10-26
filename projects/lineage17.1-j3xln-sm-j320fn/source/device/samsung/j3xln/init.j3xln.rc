@@ -1,0 +1,16 @@
+# Minimal Android 10 device init for SM-J320FN.
+#
+# The inherited Android 7 init file redefined core services and contained
+# malformed paths. Keep early bring-up conservative until userspace reaches ADB.
+
+on early-init
+    mkdir /efs 0771 radio radio
+    mkdir /preload 0755 root root
+
+on post-fs
+    chmod 0771 /efs
+    chown radio radio /efs
+
+on boot
+    setprop ro.adb.secure 0
+    setprop persist.sys.usb.config mtp,adb

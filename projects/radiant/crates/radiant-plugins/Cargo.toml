@@ -1,0 +1,20 @@
+[package]
+name = "radiant-plugins"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+serde.workspace = true
+serde_json.workspace = true
+clack-host.workspace = true
+lilv.workspace = true
+thiserror.workspace = true
+vst3-host.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

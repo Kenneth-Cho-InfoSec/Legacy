@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.minn.android.hanziime.HzimKeyboardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard"
+    android:background="@drawable/keyboard_background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:shadowColor="#bb000000"
+    android:shadowRadius="0.5"
+    android:layout_alignParentBottom="true"
+    android:keyBackground="@drawable/btn_keyboard_key_std"
+    android:keyTextSize="@dimen/key_text_size"
+    android:labelTextSize="@dimen/key_label_text_size"
+    android:keyTextColor="@color/key_text_color"
+    android:keyPreviewLayout="@layout/keyboard_key_preview"
+    android:keyPreviewOffset="-12dp"
+    android:keyPreviewHeight="@dimen/key_preview_height"
+    android:verticalCorrection="-10dp"
+    android:popupLayout="@layout/keyboard_popup_keyboard"/>

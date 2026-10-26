@@ -1,0 +1,36 @@
+/* Ubuntu typeface, designed by Dalton Maag. */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+/* Hide scrollbars throughout the demo */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  background: #151417;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Ubuntu", "Segoe UI", Cantarell, system-ui, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}

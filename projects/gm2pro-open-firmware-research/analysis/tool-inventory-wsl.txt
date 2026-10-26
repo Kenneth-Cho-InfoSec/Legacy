@@ -1,0 +1,37 @@
+Generated: 2026-05-20T15:56:09+01:00
+
+== System ==
+Linux DESKTOP-JBBJ9TP 6.6.87.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04.4 LTS
+Release:	24.04
+Codename:	noble
+
+== Tools ==
+bluetoothctl            /usr/bin/bluetoothctl
+btmon                   /usr/bin/btmon
+sdptool                 /usr/bin/sdptool
+hcitool                 /usr/bin/hcitool
+gatttool                /usr/bin/gatttool
+tshark                  /usr/bin/tshark
+wireshark               /usr/bin/wireshark
+binwalk                 /usr/bin/binwalk
+strings                 /usr/bin/strings
+file                    /usr/bin/file
+xxd                     /usr/bin/xxd
+hexdump                 /usr/bin/hexdump
+sha256sum               /usr/bin/sha256sum
+ghidra                  missing
+rizin                   missing
+r2                      /usr/bin/r2
+arm-none-eabi-objdump   /usr/bin/arm-none-eabi-objdump
+openocd                 /usr/bin/openocd
+pyocd                   /usr/bin/pyocd
+flashrom                /usr/sbin/flashrom
+sigrok-cli              /usr/bin/sigrok-cli
+pulseview               /usr/bin/pulseview
+lsusb                   /usr/bin/lsusb
+hciconfig               /usr/bin/hciconfig
+rfkill                  /usr/sbin/rfkill
+python3                 /usr/bin/python3
+pip3                    /usr/bin/pip3

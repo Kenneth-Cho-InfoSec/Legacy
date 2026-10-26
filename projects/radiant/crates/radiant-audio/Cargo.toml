@@ -1,0 +1,21 @@
+[package]
+name = "radiant-audio"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+
+[dependencies]
+alsa.workspace = true
+cpal.workspace = true
+radiant-media = { path = "../radiant-media" }
+radiant-engine = { path = "../radiant-engine" }
+radiant-pipewire = { path = "../radiant-pipewire" }
+rtrb.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+allocation-counter.workspace = true
+
+[lints]
+workspace = true

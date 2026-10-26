@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hziminfo xmlns:hzim="http://hzim.minn.idv/hanzi" hzim:imeType="Chinese">
+    <DictionaryTable
+        hzim:fileName="cj_candidate_word.tab"
+        hzim:purpose="CandidateWord"/>
+    <DictionaryTable
+        hzim:fileName="cj_root_symbol.tab"
+        hzim:purpose="RootSymbol"/>
+    <CandidateViewColumns
+        hzim:landscape="12"
+        hzim:portrait="10"/>
+    <Setting
+        hzim:ar30qkTab="false"
+        hzim:autoCompose="true"
+        hzim:autoFullUp="true"
+        hzim:autoUpChar="true"
+        hzim:disableSelectList="w"
+        hzim:endKey="false"
+        hzim:mappingKey123ToAbc="false"
+        hzim:selectKeyShift="false"
+        hzim:spaceAutoUp="true"
+        hzim:spaceReset="true"
+        hzim:spaceSendRep1st="true"
+        hzim:wildcardEnable="true"/>
+</hziminfo>
