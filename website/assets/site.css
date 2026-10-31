@@ -169,7 +169,7 @@ h2 {
 h1 {
   max-width: 780px;
   margin-bottom: 1.25rem;
-  font-size: clamp(3.6rem, 8.4vw, 7.2rem);
+  font-size: clamp(3.6rem, 6.7vw, 6.2rem);
   line-height: 0.91;
 }
 h1 em,
@@ -1106,6 +1106,13 @@ table td:last-child {
     flex-direction: column;
     gap: 0.65rem;
     padding: 1.2rem 1.25rem;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 900px) {
+  .hero__rail {
+    right: 1.25rem;
+    left: 1.25rem;
   }
 }
 
