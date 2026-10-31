@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Legacy project archive</title>
+  <desc id="desc">An index card for 15 pinned project snapshots, with branch and commit provenance.</desc>
+  <rect width="1200" height="630" fill="#f1efe8"/>
+  <rect width="14" height="630" fill="#b8412d"/>
+  <text x="78" y="77" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="17" letter-spacing="2">KENNETH CHO INFOSEC / PROJECT ARCHIVE</text>
+  <path d="M78 100H1120" stroke="#c9c8bd" stroke-width="2"/>
+
+  <text x="78" y="192" fill="#244a3b" font-family="SFMono-Regular,Consolas,monospace" font-size="16" letter-spacing="2">FIELD INDEX · 015 RECORDS</text>
+  <text x="74" y="318" fill="#1c2925" font-family="Iowan Old Style,Palatino Linotype,Georgia,serif" font-size="106" font-weight="700" letter-spacing="-4">Project</text>
+  <text x="74" y="414" fill="#244a3b" font-family="Iowan Old Style,Palatino Linotype,Georgia,serif" font-size="94" font-weight="700" font-style="italic" letter-spacing="-3">archive.</text>
+  <text x="80" y="474" fill="#40514a" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="23">15 pinned snapshots of older and experimental projects.</text>
+  <text x="80" y="514" fill="#40514a" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="21">Branch and commit provenance stays with every folder.</text>
+
+  <rect x="744" y="128" width="374" height="390" rx="2" fill="#e8e5dc" stroke="#c9c8bd" stroke-width="2"/>
+  <text x="772" y="165" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="1.4">FIELD INDEX</text>
+  <text x="1048" y="165" text-anchor="end" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="14" letter-spacing="1">NO. 015</text>
+  <path d="M772 184H1090" stroke="#c9c8bd" stroke-width="1.5"/>
+
+  <rect x="772" y="207" width="88" height="88" fill="none" stroke="#244a3b" stroke-width="3"/>
+  <text x="816" y="270" text-anchor="middle" fill="#244a3b" font-family="Iowan Old Style,Palatino Linotype,Georgia,serif" font-size="48" font-weight="700">L/</text>
+  <text x="884" y="233" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1">COLLECTION</text>
+  <text x="884" y="261" fill="#1c2925" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="22" font-weight="700">Legacy</text>
+  <text x="884" y="287" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1">SNAPSHOT ONLY</text>
+
+  <path d="M772 318H1090M772 368H1090M772 418H1090" stroke="#c9c8bd" stroke-width="1.5"/>
+  <text x="772" y="349" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1">RECORDS</text>
+  <text x="1090" y="349" text-anchor="end" fill="#1c2925" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="17" font-weight="700">15 project folders</text>
+  <text x="772" y="399" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1">SOURCE MODEL</text>
+  <text x="1090" y="399" text-anchor="end" fill="#1c2925" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="17" font-weight="700">Branch + commit</text>
+  <text x="772" y="449" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1">GIT HISTORY</text>
+  <text x="1090" y="449" text-anchor="end" fill="#1c2925" font-family="Avenir Next,Avenir,Segoe UI,sans-serif" font-size="17" font-weight="700">Not included</text>
+
+  <g transform="translate(772 474)" fill="#1c2925">
+    <rect width="5" height="22"/><rect x="10" width="2" height="22"/><rect x="17" width="7" height="22"/><rect x="30" width="3" height="22"/><rect x="38" width="2" height="22"/><rect x="45" width="8" height="22"/><rect x="58" width="3" height="22"/><rect x="67" width="6" height="22"/><rect x="79" width="2" height="22"/><rect x="86" width="8" height="22"/><rect x="100" width="3" height="22"/><rect x="108" width="6" height="22"/><rect x="120" width="2" height="22"/><rect x="127" width="8" height="22"/><rect x="141" width="3" height="22"/><rect x="150" width="5" height="22"/><rect x="161" width="2" height="22"/><rect x="168" width="8" height="22"/><rect x="181" width="3" height="22"/><rect x="190" width="7" height="22"/><rect x="203" width="2" height="22"/><rect x="210" width="6" height="22"/><rect x="222" width="4" height="22"/><rect x="232" width="7" height="22"/><rect x="245" width="2" height="22"/><rect x="252" width="8" height="22"/><rect x="266" width="3" height="22"/><rect x="275" width="6" height="22"/><rect x="287" width="2" height="22"/><rect x="294" width="8" height="22"/>
+  </g>
+  <text x="772" y="548" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="12" letter-spacing="1">CATALOG / KCI–LGC / 2026</text>
+  <rect x="80" y="562" width="620" height="3" fill="#b8412d"/>
+  <text x="80" y="594" fill="#59665e" font-family="SFMono-Regular,Consolas,monospace" font-size="13" letter-spacing="1.2">OLDER WORK, KEPT IN CONTEXT.</text>
+</svg>
